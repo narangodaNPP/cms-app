@@ -1,0 +1,64 @@
+﻿<Window x:Class="cms_app.Views.landingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cms_app.Views"
+        mc:Ignorable="d"
+        Title="Landing Window" Height="650" Width="960" ResizeMode="NoResize">
+
+    <Border Padding="10">
+        <Grid Background="White">
+            <!-- top bar-->
+            <Canvas x:Name="topBar" Background="White" Margin="210,-1,5,515" RenderTransformOrigin="0.5,0.5" Height="100">
+
+                <Button x:Name="registerButton" Height="50" Width="70" Canvas.Left="640" Canvas.Top="25" Content="REGISTER"/>
+                <Button x:Name="loginButton" Height="50" Width="70" Canvas.Left="550" Canvas.Top="25" Content="LOGIN"/>
+
+            </Canvas>
+
+            <!--Side bar-->
+            <StackPanel x:Name="sideBar" Orientation="Vertical" Margin="0,0,730,1">
+
+                <Button x:Name="logoButton" Height="100" Click="logoButton_Click">
+                    <Image Stretch="UniformToFill"/>
+                </Button>
+
+                <!--Navigation section-->
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button x:Name="registrationButton" Height="54">
+                    <StackPanel Orientation="horizontal" Width="150">
+                        <ContentControl Content="   REGISTRATION" Width="122" Height="18"/>
+                    </StackPanel>
+                </Button>
+                <Button x:Name="contactButton" Height="54">
+                    <StackPanel Orientation="horizontal" Width="150">
+                        <ContentControl Content="   CONTACT" Width="102" Height="18"/>
+                    </StackPanel>
+                </Button>
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button Height="54" HorizontalAlignment="Right" Width="210" IsEnabled="False"/>
+                <Button x:Name="exitButton" Height="54">
+                    <StackPanel Orientation="horizontal" Width="150">
+                        <ContentControl Content="   EXIT" Width="69" Height="18"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+            <Grid HorizontalAlignment="Left" Height="485" Margin="210,99,0,0" VerticalAlignment="Top" Width="730">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="0*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+            </Grid>
+
+
+        </Grid>
+
+    </Border>
+
+
+</Window>
