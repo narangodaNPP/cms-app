@@ -1,13 +1,11 @@
-﻿<Window x:Class="cms_app.Views.landingWindow"
+﻿<Window x:Class="cms_app.Views.Payment"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cms_app.Views"
         mc:Ignorable="d"
-        Title="Landing Window" Height="720" Width="1280" SizeToContent="WidthAndHeight" ResizeMode="NoResize" >
-
-
+        Title="Payment" Height="720" Width="1280" SizeToContent="WidthAndHeight" ResizeMode="NoResize" >
 
     <Border Margin="10">
         <Grid Background="White">
@@ -44,7 +42,7 @@
 
 
             <!--Side bar-->
-            <!--<Button Margin="10" Grid.Column="0" Grid.Row="3" x:Name="registrationButton" Height="auto">
+            <Button Margin="10" Grid.Column="0" Grid.Row="3" x:Name="registrationButton" Height="auto">
                 <StackPanel Orientation="horizontal" Width="auto">
                     <ContentControl Content="   REGISTRATION" Width="auto" Height="18"/>
                 </StackPanel>
@@ -58,33 +56,19 @@
                 <StackPanel Orientation="horizontal" Width="auto">
                     <ContentControl Content="   EXIT" Width="69" Height="18"/>
                 </StackPanel>
-            </Button>-->
+            </Button>
             <!--end of sice bar-->
 
 
 
 
             <!--content Section-->
-            <Grid HorizontalAlignment="Left" Height="535" Background="AliceBlue" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Grid.RowSpan="8" Width="1260" >
-                <Grid.RowDefinitions>
-
-
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="2*"/>
-
-
-                </Grid.RowDefinitions>
-                <Image Grid.Row="0" Margin="30">
-                    <!--image -->
-                </Image>
-                <!--Footer section-->
-            </Grid>
+            <Grid HorizontalAlignment="Left" Height="535" Background="AliceBlue" VerticalAlignment="Top" Width="950" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="8" />
 
 
 
         </Grid>
 
     </Border>
-
 
 </Window>
