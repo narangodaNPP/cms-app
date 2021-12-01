@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,25 @@ namespace cms_app
         public MainWindow()
         {
             InitializeComponent();
+            createStudent();
+        }
+
+        public void createStudent()
+        {
+            DatabaseRepository repository = new DatabaseRepository();
+            Student student1 = new Student()
+            {
+                firstName = "Achila",
+                lastName = "Sandeep",
+                email = "achilasandeep@gmail.com",
+                contactNo = 0123456789,
+                password = "achila123",
+                age = 23
+
+            };
+
+            repository.Student.Add(student1);
+            repository.SaveChanges();
         }
     }
 }

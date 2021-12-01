@@ -23,5 +23,12 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
+
+        private void signinButton_Click(object sender, RoutedEventArgs e)
+        {
+            studentDashboard studDashboard = new studentDashboard();
+            studDashboard.Show();
+            this.Close();
+        }
     }
 }
