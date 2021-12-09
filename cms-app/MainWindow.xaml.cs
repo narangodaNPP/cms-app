@@ -42,8 +42,7 @@ namespace cms_app
 
             };
 
-            repository.Student.Add(student1);
-            repository.SaveChanges();
+            
         }
     }
 }
