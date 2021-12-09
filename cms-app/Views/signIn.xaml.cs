@@ -30,5 +30,14 @@ namespace cms_app.Views
             studDashboard.Show();
             this.Close();
         }
+
+      
+
+        private void signupButton_Click(object sender, RoutedEventArgs e)
+        {
+            signUp signup = new signUp();
+            signup.Show();
+            this.Close();
+        }
     }
 }
