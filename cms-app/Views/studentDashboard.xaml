@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cms_app.Views"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="studentDashboard" Height="720" Width="1280" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
 
-    <Border Margin="10">
+    <Border Margin="10" CornerRadius="20">
         <Grid Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="310"/>
@@ -31,13 +32,6 @@
             </Grid.RowDefinitions>
 
             <!-- top bar-->
-            <Button Margin="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
-                <!--logo image-->
-            </Button>
-
-
-            <Button Margin="10" Grid.Row="1" Grid.Column="3" x:Name="registerButton" Height="auto" Width="auto" Content="REGISTER"/>
-            <Button Margin="10" Grid.Row="1" Grid.Column="2" Width="auto" x:Name="loginButton" Height="auto" Content="LOGIN"/>
 
 
 
@@ -48,6 +42,11 @@
                 </StackPanel>
             </Button>
             <Button Margin="10" Grid.Column="0" Grid.Row="4" x:Name="contactButton" Height="auto" Width="auto">
+                <StackPanel Orientation="horizontal" Width="auto">
+                    <ContentControl Content="   CONTACT" Width="102" Height="18"/>
+                </StackPanel>
+            </Button>
+            <Button Margin="10,22,10,13" Grid.Column="0" Height="auto" Width="auto" Grid.Row="5">
                 <StackPanel Orientation="horizontal" Width="auto">
                     <ContentControl Content="   CONTACT" Width="102" Height="18"/>
                 </StackPanel>

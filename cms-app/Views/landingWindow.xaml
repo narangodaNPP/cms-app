@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cms_app.Views"
         mc:Ignorable="d"
+        WindowStyle="None"
+        Background="Transparent"
+        AllowsTransparency="True"
         Title="Landing Window" Height="720" Width="1280" SizeToContent="WidthAndHeight" ResizeMode="NoResize" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" >
 
 
 
-    <Border Margin="10">
+    <Border Margin="10"
+            CornerRadius="30">
         <Grid Background="White">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="310"/>
@@ -32,34 +36,13 @@
 
             </Grid.RowDefinitions>
 
-            <!-- top bar-->
-            <Button Margin="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
-                <!--logo image-->
-            </Button>
+
 
 
             <Button Margin="10" Grid.Row="1" Grid.Column="3" x:Name="registerButton" Height="auto" Width="auto" Content="REGISTER" Click="registerButton_Click"/>
             <Button Margin="10" Grid.Row="1" Grid.Column="2" Width="auto" x:Name="loginButton" Height="auto" Content="LOGIN" Click="loginButton_Click"/>
 
 
-
-            <!--Side bar-->
-            <!--<Button Margin="10" Grid.Column="0" Grid.Row="3" x:Name="registrationButton" Height="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   REGISTRATION" Width="auto" Height="18"/>
-                </StackPanel>
-            </Button>
-            <Button Margin="10" Grid.Column="0" Grid.Row="4" x:Name="contactButton" Height="auto" Width="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   CONTACT" Width="102" Height="18"/>
-                </StackPanel>
-            </Button>
-            <Button Margin="10" Grid.Column="0" Grid.Row="10" x:Name="exitButton" Height="auto" Width="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   EXIT" Width="69" Height="18"/>
-                </StackPanel>
-            </Button>-->
-            <!--end of sice bar-->
 
 
 
@@ -74,13 +57,11 @@
 
 
                 </Grid.RowDefinitions>
-                <Image Grid.Row="0" Margin="30">
-                    <!--image -->
-                </Image>
+
                 <!--Footer section-->
+                <Rectangle Margin="0,316,0,1" Fill="red" Grid.RowSpan="2"/>
+                <Rectangle Margin="5,13,0,10" Fill="green"/>
             </Grid>
-
-
 
         </Grid>
 

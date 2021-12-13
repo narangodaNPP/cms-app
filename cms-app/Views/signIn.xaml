@@ -6,6 +6,7 @@
         xmlns:local="clr-namespace:cms_app.Views"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Name="sign_in" x:Class="cms_app.Views.signIn"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Sign In" Height="712" Width="798" SizeToContent="WidthAndHeight" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" >
 
     <Border Margin="10">
