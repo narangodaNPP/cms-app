@@ -23,5 +23,20 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
+
+        private void signupButton_Click(object sender, RoutedEventArgs e)
+        {
+            studentDashboard stud = new studentDashboard();
+            stud.ShowDialog();
+            this.Close();
+
+        }
+
+        private void signinButton_Click(object sender, RoutedEventArgs e)
+        {
+            signIn signin = new signIn();
+            signin.Show();
+            this.Close();
+        }
     }
 }
