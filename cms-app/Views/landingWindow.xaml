@@ -4,68 +4,251 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:cms_app.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         mc:Ignorable="d"
         WindowStyle="None"
         Background="Transparent"
         AllowsTransparency="True"
-        Title="Landing Window" Height="720" Width="1280" SizeToContent="WidthAndHeight" ResizeMode="NoResize" HorizontalAlignment="Center" VerticalAlignment="Center" WindowStartupLocation="CenterScreen" >
+        Title="Landing Window" 
+        Height="500" 
+        Width="800" 
+        ResizeMode="NoResize" 
+        HorizontalAlignment="Center" 
+        VerticalAlignment="Center" 
+        WindowStartupLocation="CenterScreen" >
 
 
 
-    <Border Margin="10"
-            CornerRadius="30">
-        <Grid Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="310"/>
-                <ColumnDefinition Width="650"/>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="150"/>
-            </Grid.ColumnDefinitions>
+
+    <Border CornerRadius="20" BorderBrush="#eceff1" BorderThickness='8'>
+
+        <Grid Background="#eceff1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="44"/>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="44"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-
+                <RowDefinition/>
             </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Background="White" CornerRadius="10" Grid.ColumnSpan="2">
+                <Grid Grid.ColumnSpan="2" Background="Transparent">
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="E-CLASS"
+                                   Foreground="Black"
+                                   FontFamily="Comic Sans MS"
+                                   FontSize="30"
+                                   Padding="30 0 0 0"
+                                   FontWeight="Bold"
+                                   VerticalAlignment="Center"
+                                   HorizontalAlignment="Left" 
+                                   Width="177" 
+                                   Grid.ColumnSpan="3" 
+                                   Margin="28,0,0,0"/>
+                    <Button Content="Register"
+                            Style="{StaticResource MaterialDesignOutlinedSecondaryLightButton}"
+                            FontFamily="Comic Sans MS00"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            Grid.Column="9" 
+                            Grid.ColumnSpan="2" 
+                            Margin="11,12,21,16"
+                            />
+
+                </Grid>
+            </Border>
+            <StackPanel Grid.Row="1"
+                        Margin="20 30 20 30">
+                <StackPanel Orientation="Horizontal">
+                    <Image
+                            Source="../Icons/Logo.ico" 
+                            Grid.Row="1"
+                            Height="50"
+                            Width="50"/>
+
+                    <TextBlock Text="E-CLASS"
+                                   Foreground="Black"
+                                   FontSize="20"
+                                   VerticalAlignment="center"
+                                   FontFamily ="Comic Sans MS"/>
+                </StackPanel>
+                <TextBlock Text="text1"
+                               FontSize="25"
+                               Foreground="black"
+                               Margin="20 3 3 3"/>
+                <TextBlock Text="text1"
+                                   FontSize="25"
+                                   Foreground="black"
+                                   Margin="20 3 3 3"/>
+
+                <TextBlock Text="Lorem Ipsum is simply dummy text of the printing and 
+                               typesetting industry. Lorem Ipsum has been the industry's 
+                           standard dummy text ever since the 1500s, when an unknown 
+                           printer took a galley of type and scrambled it to make a type 
+                           specimen book. It has survived not only five centuries,
+                           but also the leap into electronic typesetting, remaining 
+                           essentially unchanged. It was popularised in the 1960s with 
+                           the release of Letraset sheets containing Lorem Ipsum passages, 
+                           and more recently with desktop publishing software like Aldus 
+                           PageMaker including versions of Lorem Ipsum."
+                           Foreground="black"
+                           TextWrapping="WrapWithOverflow"
+                           FontSize="12" 
+                           Margin="20 5 5 10"/>
+                <StackPanel Orientation="Horizontal"
+                            Margin="20 0 10 10">
+                    <Button Content="Teacher"
+                            FontSize="13"
+                            FontWeight="Medium"
+                            materialDesign:ButtonAssist.CornerRadius="10"
+                            Margin="10"
+                            />
+                    <Button Content="Student"
+                           FontSize="13"
+                           FontFamily="Comic Sans MS"
+                           FontWeight="Medium"
+                           materialDesign:ButtonAssist.CornerRadius="10"
+                           Margin="10"
+                          />
+                </StackPanel>
 
 
 
+            </StackPanel>
 
-            <Button Margin="10" Grid.Row="1" Grid.Column="3" x:Name="registerButton" Height="auto" Width="auto" Content="REGISTER" Click="registerButton_Click"/>
-            <Button Margin="10" Grid.Row="1" Grid.Column="2" Width="auto" x:Name="loginButton" Height="auto" Content="LOGIN" Click="loginButton_Click"/>
+            <Grid Grid.Column="1"
+                  Grid.Row="2"
+                  Margin="160 -365 -610 85"
+                  Panel.ZIndex="-1">
 
+                <Grid.RenderTransform>
+                    <RotateTransform Angle="50"/>
+                </Grid.RenderTransform>
 
+                <StackPanel Orientation="Horizontal"
+                            Margin="-350 250 -255 -250">
 
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="150 0 0 0"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                Margin="150 0 0 0"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="0 0 0 50"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                CornerRadius="20"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20"/>
+                    </StackPanel>
+                </StackPanel>
 
-
-
-            <!--content Section-->
-            <Grid HorizontalAlignment="Left" Height="535" Background="AliceBlue" VerticalAlignment="Top" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="4" Grid.RowSpan="8" Width="1260" >
-                <Grid.RowDefinitions>
-
-
-                    <RowDefinition Height="3*"/>
-                    <RowDefinition Height="2*"/>
-
-
-                </Grid.RowDefinitions>
-
-                <!--Footer section-->
-                <Rectangle Margin="0,316,0,1" Fill="red" Grid.RowSpan="2"/>
-                <Rectangle Margin="5,13,0,10" Fill="green"/>
             </Grid>
 
         </Grid>
 
+
+
+
+
     </Border>
 
 
+
+
 </Window>
+
+
+<!--
+    <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="TextElement.FontFamily" Value="Comic Sans MS"/>
+                                <Setter Property="Background" Value="Blue"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="100" 
+                                            Height="50"
+                                            CornerRadius="10"
+                                            Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+
+                    <Button Content="Teacher"
+                                FontSize="13"
+                                FontWeight="Medium">
+
+
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Setter Property="TextElement.FontFamily" Value="Comic Sans MS"/>
+                                <Setter Property="Background" Value="Purple"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+
+                            </Style>
+                        </Button.Style>
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Border Width="100" 
+                                            Height="50"
+                                            CornerRadius="10"
+                                            Background="{TemplateBinding Background}">
+                                    <ContentPresenter VerticalAlignment="Center"
+                                                          HorizontalAlignment="Center"/>
+                                </Border>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+    -->
