@@ -124,8 +124,7 @@
                 Margin="72,5,1,6"/>
             
             <Button 
-                x:Name="signupButton" 
-                Click="signupButton_Click" 
+                x:Name="signupButton"
                 Content="SIGN-UP" 
                 Grid.ColumnSpan="4" 
                 Grid.Column="1" 
@@ -140,7 +139,7 @@
             <Button 
                 x:Name="signinButton" 
                 Style="{StaticResource MaterialDesignFlatLightButton}" 
-                Click="signinButton_Click" Content="Already have account, SIGN-IN" 
+                Content="Already have account, SIGN-IN" 
                 Grid.ColumnSpan="5" 
                 Grid.Column="1" 
                 HorizontalAlignment="Left" 
