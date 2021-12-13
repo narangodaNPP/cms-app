@@ -78,7 +78,7 @@
 
             <TextBlock
                  Style="{StaticResource MaterialDesignHeadline4TextBlock}"
-                 Text="SIGN-UP" Height="52" VerticalAlignment="Top" Margin="152,51,151,0" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"   
+                 Text="SIGN-IN" Height="52" VerticalAlignment="Top" Margin="152,51,151,0" Grid.Column="1" Grid.Row="1" Grid.RowSpan="2"   
              />
 
 
