@@ -24,25 +24,6 @@ namespace cms_app.Views
             InitializeComponent();
         }
 
-        private void logoButton_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void loginButton_Click(object sender, RoutedEventArgs e)
-        {
-            signIn signin = new signIn();
-            signin.Show();
-
-            this.Close();
-        }
-
-        private void registerButton_Click(object sender, RoutedEventArgs e)
-        {
-            signUp signup = new signUp();
-            signup.Show();
-
-            this.Close();
-        }
+        
     }
 }
