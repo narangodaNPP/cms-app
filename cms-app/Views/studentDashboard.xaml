@@ -8,12 +8,12 @@
         WindowStyle="None"
         Title="studentDashboard" 
         Height="500" 
-        Width="900" 
-        SizeToContent="WidthAndHeight" 
+        Width="900"  
         ResizeMode="NoResize" 
         AllowsTransparency="True"
         Background="Transparent"
         WindowStartupLocation="CenterScreen" >
+
     <Border CornerRadius="20" 
             BorderBrush="#eceff1" 
             BorderThickness='8'>
@@ -27,8 +27,8 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="159*"/>
-                <ColumnDefinition Width="725*"/>
+                <ColumnDefinition Width="48*"/>
+                <ColumnDefinition Width="173*"/>
             </Grid.ColumnDefinitions>
             <Border Background="White" 
                     CornerRadius="10" 
@@ -83,7 +83,7 @@
 
             <Frame Grid.Row="1"
                    Grid.RowSpan="3"
-                   Grid.Column="2"
+                   Grid.Column="1"
                    x:Name="myDashboardFrame" 
                     
                    NavigationUIVisibility="Hidden"
@@ -91,32 +91,33 @@
 
 
             <!-- Side bar-->
-            <StackPanel Grid.Row="2"
-                        Grid.Column="0" 
-                        Margin="2"
+            <StackPanel Grid.Row="2" 
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
+                        HorizontalAlignment="Center" 
+                        Width="182" Height="156">
 
                 <Button Content="Home"
                         
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="20" 
                 />
                 <Button Content="Classes"
                         x:Name="courseButton"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                        
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="20" 
                 />
                 <Button Content="Payments"
                         x:Name="cardButton"
+                        
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="20" 
                 />
 
             </StackPanel>
