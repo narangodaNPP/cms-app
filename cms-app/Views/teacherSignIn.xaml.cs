@@ -31,8 +31,8 @@ namespace cms_app.Views
         {
             if (LoginLogCtx.teachers.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
             {
-                studentDashboard studDashboard = new studentDashboard();
-                studDashboard.Show();
+                teacherDashboard teachDashboard = new teacherDashboard();
+                teachDashboard.Show();
                 this.Close();
 
             }

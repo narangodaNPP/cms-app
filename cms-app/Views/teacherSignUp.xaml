@@ -93,7 +93,7 @@
                 FontWeight="Medium"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
-                MinWidth="200" 
+                MinWidth="200" Click="Button_Click" 
                
                 />
             <Button Content="Allready a member, SIGN-IN"

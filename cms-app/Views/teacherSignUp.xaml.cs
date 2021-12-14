@@ -31,7 +31,7 @@ namespace cms_app.Views
 {
    DatabaseRepository repository = new DatabaseRepository();
 
-   teacher teacher = new teacher()
+   teacher Teacher = new teacher()
    {
 
 
@@ -50,11 +50,19 @@ namespace cms_app.Views
 
 
    };
-   repository.teachers.Add(teacher);
+   repository.teachers.Add(Teacher);
    repository.SaveChanges();
 
    MessageBox.Show("Successfully Registerd!!");
 
-}
+            teacherSignIn teasigni = new teacherSignIn();
+            teasigni.Show();
+            this.Close();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            add();
+        }
     }
 }
