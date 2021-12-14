@@ -37,7 +37,7 @@
                 FontSize="16"
                 MaxWidth="400"
                 TextWrapping="Wrap"
-                materialDesign:HintAssist.Hint="Subject"
+                materialDesign:HintAssist.Hint="Class name"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Margin="10"
                     
@@ -60,7 +60,7 @@
                 FontFamily="Comic Sans MS"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Class Fee"
+                    materialDesign:HintAssist.Hint="Duration"
                     materialDesign:TextFieldAssist.HasClearButton="True" 
                     Margin="10"
                  />
@@ -79,7 +79,7 @@
                 FontFamily="Comic Sans MS"
                 MaxWidth="400"
                 TextWrapping="Wrap"
-                materialDesign:HintAssist.Hint="Duration"
+                materialDesign:HintAssist.Hint="Subject"
                 materialDesign:TextFieldAssist.HasClearButton="True"     
             />
             <TextBox 
@@ -93,7 +93,7 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                  />
-            <!--
+
             <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
@@ -101,12 +101,12 @@
                 FontFamily="Comic Sans MS"
                     TextWrapping="Wrap"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
+                    materialDesign:HintAssist.Hint="Class Fee"
                     materialDesign:TextFieldAssist.HasClearButton="True" 
                     Margin="10"
-                 />
-            -->
-            
+                 
+            />
+
 
 
         </StackPanel>
