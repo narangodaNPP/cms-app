@@ -30,94 +30,73 @@
 
         <StackPanel Grid.Column="0"
                     Margin="10,10,10,10" 
-                    Grid.Row ="1">
-            <TextBox 
-                Style="{StaticResource MaterialDesignFilledTextBox}"
-                AcceptsReturn="True"
+                    Grid.Row ="1"
+                    Grid.ColumnSpan="2"
+                    >
+            <ComboBox
+                Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
-                MaxWidth="400"
-                TextWrapping="Wrap"
-                materialDesign:HintAssist.Hint="First Name"
+                MaxWidth="300"
+                materialDesign:HintAssist.Hint="Subject"
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Margin="10"
-                    
-            />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
+                >
+                <ComboBoxItem
+                  Content="Item 1" />
+                <ComboBoxItem
+                  Content="Item 2" />
+                <ComboBoxItem
+                  Content="Item 3" />
+            </ComboBox>
+            <ComboBox
+                Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
-                    MaxWidth="400"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
-                    materialDesign:TextFieldAssist.HasClearButton="True"
-                    Margin="10"
-                 />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
+                FontSize="16"
+                MaxWidth="300"
+                materialDesign:HintAssist.Hint="Teacher"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Margin="10"
+                >
+                <ComboBoxItem
+                  Content="Item 1" />
+                <ComboBoxItem
+                  Content="Item 2" />
+                <ComboBoxItem
+                  Content="Item 3" />
+            </ComboBox>
+            <ComboBox
+                Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="10"
-                 />
+                FontSize="16"
+                MaxWidth="300"
+                materialDesign:HintAssist.Hint="Class"
+                materialDesign:TextFieldAssist.HasClearButton="True"
+                Margin="10"
+                >
+                <ComboBoxItem
+                  Content="Item 1" />
+                <ComboBoxItem
+                  Content="Item 2" />
+                <ComboBoxItem
+                  Content="Item 3" />
+            </ComboBox>
 
         </StackPanel>
 
-        <StackPanel Grid.Column ="1"
-                    Margin="10,10,10,10" 
-                    Grid.Row ="1"
-                    Grid.RowSpan="2">
-            <TextBox 
-            Style="{StaticResource MaterialDesignFilledTextBox}"
-            AcceptsReturn="True"
-            FontSize="16"
-            Margin="10"
-            FontFamily="Comic Sans MS"
-            MaxWidth="400"
-            TextWrapping="Wrap"
-            materialDesign:HintAssist.Hint="First Name"
-            materialDesign:TextFieldAssist.HasClearButton="True"
-            
-                    
-        />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                FontFamily="Comic Sans MS"
-                    MaxWidth="400"
-                    TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
-                    materialDesign:TextFieldAssist.HasClearButton="True"
-                    Margin="10"
-                 />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                FontFamily="Comic Sans MS"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="10"
-                 />
-
-            <Button 
-                    Content="Next"
-                    MaxWidth="200"
-                    FontFamily="Comic Sans MS"
-                Margin="10 20 20 0"
-                    HorizontalAlignment="Right"
-                    Grid.Row ="3"/>
+        
+         <Button 
+                 Content="Next"
+                 MaxWidth="200"
+                 FontFamily="Comic Sans MS"
+             Margin="10 20 20 0"
+                 HorizontalAlignment="Right"
+                 Grid.Row ="3"
+                 Grid.Column="0"
+                Grid.ColumnSpan="2"/>
 
 
-        </StackPanel>
+        
 
 
     </Grid>
