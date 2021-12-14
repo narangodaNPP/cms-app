@@ -75,23 +75,23 @@
 
             </Border>
 
-            <Label Content="name of the user should be here"
+            <Label Content="K.K. Ariyasinghe"
                         Grid.Row="1"
-                        Grid.Column="2"
+                        Grid.Column="1"
                         x:Name="personButton"
                         FontFamily="Comic Sans MS"
-                        HorizontalAlignment="Right"
+                        HorizontalAlignment="Left"
                         VerticalAlignment="Center"
                         FontSize="13"
-                        Margin="5" 
-                        Background="red"
-                        Width="215" 
+                        Margin="555,0,0,0" 
+                        
+                        Width="132" 
                     />
 
             <Frame Grid.Row="2"
                    Grid.RowSpan="3"
                    Grid.Column="1"
-                   x:Name="myDashboardFrame" 
+                   x:Name="myStudentDashboardFrame" 
                     
                    NavigationUIVisibility="Hidden"
             />
@@ -108,13 +108,13 @@
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="20" Click="homeButton_Click" 
                 />
                 <Button Content="CLASSES"
                         x:Name="classButton"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         Margin="0 20 0 0"
-                        
+                        Click="classButton_Click"
                         FontFamily="Comic Sans MS"
                         FontSize="20" 
                 />
