@@ -27,11 +27,11 @@ namespace cms_app.Views
         }
 
  
-        /*public void add()
+        public void add()
 {
    DatabaseRepository repository = new DatabaseRepository();
 
-   teacher teacher = new teachers()
+   teacher teacher = new teacher()
    {
 
 
@@ -40,8 +40,9 @@ namespace cms_app.Views
        lastName = txtlastname.Text,
        email = txtemail.Text,
        contactNo = Convert.ToInt32(txtcontactno.Text),
-       password = txtpassword.Password,
-       dateofbirth = txtdateofbirth.SelectedDate.Value,
+       password = password.Password,
+       dateofbirth = dateofbirth.SelectedDate.Value,
+       subject = txtsubject.Text,
 
 
 
@@ -49,11 +50,11 @@ namespace cms_app.Views
 
 
    };
-   repository.Students.Add(student);
+   repository.teachers.Add(teacher);
    repository.SaveChanges();
 
    MessageBox.Show("Successfully Registerd!!");
 
-}*/
+}
     }
 }
