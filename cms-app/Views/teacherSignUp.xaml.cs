@@ -31,38 +31,37 @@ namespace cms_app.Views
 {
    DatabaseRepository repository = new DatabaseRepository();
 
-   teacher Teacher = new teacher()
-   {
+        teacher Teacher = new teacher()
+        {
+            firstName = txtfirstname.Text,
+            lastName = txtlastname.Text,
+            email = txtemail.Text,
+            contactNo = Convert.ToInt32(txtcontactno.Text),
+            password = password.Password,
+            dateofbirth = dateofbirth.SelectedDate.Value,
+            subject = txtsubject.Text,
+        };
+        repository.teachers.Add(Teacher);
+        repository.SaveChanges();
 
+        MessageBox.Show("Successfully Registerd!!");
 
-
-       firstName = txtfirstname.Text,
-       lastName = txtlastname.Text,
-       email = txtemail.Text,
-       contactNo = Convert.ToInt32(txtcontactno.Text),
-       password = password.Password,
-       dateofbirth = dateofbirth.SelectedDate.Value,
-       subject = txtsubject.Text,
-
-
-
-
-
-
-   };
-   repository.teachers.Add(Teacher);
-   repository.SaveChanges();
-
-   MessageBox.Show("Successfully Registerd!!");
-
-            teacherSignIn teasigni = new teacherSignIn();
-            teasigni.Show();
-            this.Close();
+        teacherDashboard teasigni = new teacherDashboard();
+        teasigni.Show();
+        this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void signup_Click(object sender, RoutedEventArgs e)
         {
             add();
         }
+
+        private void signin_click(object sender, RoutedEventArgs e)
+        {
+            teacherSignIn signin = new teacherSignIn();
+            signin.Show();
+            this.Close();
+        }
+       
     }
 }
