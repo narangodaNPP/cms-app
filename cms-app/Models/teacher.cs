@@ -10,7 +10,7 @@ namespace cms_app.Models
    public class teacher
     {
         [Key]
-        public string teacherID { get; set; }
+        public int teacherID { get; set; }
 
         [Required]
         public string firstName { get; set; }
@@ -27,6 +27,8 @@ namespace cms_app.Models
         public string password { get; set; }
         public int age { get; set; }
         public string subject { get; set; }
+
+        public string myclasses { get; set; }
     }
 }
 

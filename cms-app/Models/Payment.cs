@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cms_app.Models
 {
-    class Payment
+    public class Payment
     {
         [Key]
         public int paymentID { get; set; }

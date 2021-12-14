@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace cms_app.Models
 {
-    class Student
+    public class Student
     {
         [Key]
-        public string studentID { get; set; }
+        public int studentID { get; set; }
 
         [Required]
         public string firstName { get; set; }
@@ -26,5 +26,6 @@ namespace cms_app.Models
         [Required]
         public string password { get; set; }
         public int age { get; set; }
+        public string myclasses { get; set; }
     }
 }
