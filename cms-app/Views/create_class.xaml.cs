@@ -37,7 +37,6 @@ namespace cms_app.Views
 
                 subject = txtsubject.Text,
                 day = txtday.Text,
-                time = txttime.Text,
                 duration = txtduration.Text,
                 classfree = txtclassfree.Text,
 

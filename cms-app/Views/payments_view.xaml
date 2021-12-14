@@ -73,12 +73,12 @@
 
                 <DataGridTextColumn
                     Binding="{Binding Code}"
-                    Header="First Name"
+                    Header="Payment ID"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                 <!-- if you want to use the pop up style (MaterialDesignDataGridTextColumnPopupEditingStyle), you must use MaterialDataGridTextColumn -->
                 <materialDesign:DataGridTextColumn
-                    Header="Last Name"
+                    Header="First Name"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
                     <materialDesign:DataGridTextColumn.Binding>
@@ -90,7 +90,7 @@
                 </materialDesign:DataGridTextColumn>
                 <!-- set a max length to get an indicator in the editor -->
                 <DataGridTextColumn
-                    Header="E-mail"
+                    Header="Last Name"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}">
                     <DataGridTextColumn.Binding>
@@ -102,7 +102,7 @@
                 </DataGridTextColumn>
                 <materialDesign:DataGridTextColumn
                     Binding="{Binding Numeric}"
-                    Header="Contact No:"
+                    Header="Class"
                     Width="120"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
                     <DataGridTextColumn.HeaderStyle>
@@ -137,7 +137,7 @@
                 </materialDesign:DataGridTextColumn>
                 <!-- use custom combo box column to get better combos. Use ItemsSourceBinding as your binding template to be applied to each combo -->
                 <materialDesign:DataGridComboBoxColumn
-                    Header="Birth Date"
+                    Header="Amount"
                     IsEditable="True"
                     Width="100"
                     SelectedValueBinding="{Binding Food}"
