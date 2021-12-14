@@ -68,23 +68,26 @@
                            Height="50"
                            Width="50"/>
 
-                    <Label Content="name of the user should be here"
-                        Grid.Column="8"
-                        x:Name="personButton"
-                        FontFamily="Comic Sans MS"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        FontSize="13" 
-                        Grid.ColumnSpan="3" 
-                        Margin="9,0,0,0" 
-                        Width="215" 
-                    />
+
                 </Grid>
 
 
             </Border>
 
-            <Frame Grid.Row="1"
+            <Label Content="name of the user should be here"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        x:Name="personButton"
+                        FontFamily="Comic Sans MS"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Margin="5" 
+                        Background="red"
+                        Width="215" 
+                    />
+
+            <Frame Grid.Row="2"
                    Grid.RowSpan="3"
                    Grid.Column="1"
                    x:Name="myDashboardFrame" 
@@ -99,14 +102,14 @@
                         HorizontalAlignment="Center" 
                         Width="182" Height="156">
 
-                <Button Content="Home"
+                <Button Content="HOME"
                         
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
                         FontSize="20" 
                 />
-                <Button Content="Classes"
+                <Button Content="CLASSES"
                         x:Name="courseButton"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         Margin="0 20 0 0"
@@ -114,7 +117,7 @@
                         FontFamily="Comic Sans MS"
                         FontSize="20" 
                 />
-                <Button Content="Payments"
+                <Button Content="PAYMENTS"
                         x:Name="cardButton"
                         
                         Margin="0 20 0 0"
@@ -125,13 +128,24 @@
 
             </StackPanel>
 
+            <Button Content="LOGOUT"
+                        x:Name="logoutButton"
+                        Margin="2"
+                        Grid.Row="4"
+                        VerticalAlignment="Center"
+                        
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+
 
 
 
             <!-- Styling part-->
             <Grid Grid.Column="1"
-                  Margin="496,-428,-946,32"
-                  Panel.ZIndex="-1">
+                  Margin="393,-366,-843,20"
+                  Panel.ZIndex="-1" Grid.RowSpan="2">
 
                 <Grid.RenderTransform>
                     <RotateTransform Angle="50"/>

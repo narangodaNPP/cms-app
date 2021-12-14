@@ -6,70 +6,203 @@
         xmlns:local="clr-namespace:cms_app.Views"
         mc:Ignorable="d"
         Title="teacherDashboard" 
-        Height="720" 
-        Width="1280" 
-        SizeToContent="WidthAndHeight" 
-        ResizeMode="NoResize" >
+        Height="500" 
+        Width="900" 
+        WindowStyle="None"
+        ResizeMode="NoResize" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen" >
 
-    <Border Margin="10">
-        <Grid Background="White">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="310"/>
-                <ColumnDefinition Width="650"/>
-                <ColumnDefinition Width="150"/>
-                <ColumnDefinition Width="150"/>
-            </Grid.ColumnDefinitions>
+    <Border CornerRadius="20" 
+            BorderBrush="#eceff1" 
+            BorderThickness='8'>
+
+        <Grid Background="#eceff1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="44"/>
                 <RowDefinition Height="60"/>
-                <RowDefinition Height="44"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-                <RowDefinition Height="67"/>
-
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="267*"/>
+                <RowDefinition Height="107*" />
             </Grid.RowDefinitions>
 
-            <!-- top bar-->
-            <Button Margin="10" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3">
-                <!--logo image-->
-            </Button>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="48*"/>
+                <ColumnDefinition Width="173*"/>
+            </Grid.ColumnDefinitions>
+            <Border Background="White" 
+                    CornerRadius="10" 
+                    Grid.ColumnSpan="2">
+
+                <Grid Grid.ColumnSpan="2" 
+                      Background="Transparent">
 
 
-            <Button Margin="10" Grid.Row="1" Grid.Column="3" x:Name="registerButton" Height="auto" Width="auto" Content="REGISTER"/>
-            <Button Margin="10" Grid.Row="1" Grid.Column="2" Width="auto" x:Name="loginButton" Height="auto" Content="LOGIN"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="E-CLASS"
+                            Foreground="Black"
+                            FontFamily="Comic Sans MS"
+                            FontSize="30"
+                            Padding="50 0 0 0"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            Grid.ColumnSpan="3" 
+                            Margin="40,0,0,0"/>
+                    <Image
+                           Source="../Icons/Logo.ico" 
+                           Grid.Row="1"
+                           Height="50"
+                           Width="50"/>
+
+                   
+                </Grid>
 
 
+            </Border>
+            <Label Content="name of the user should be here"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        x:Name="personButton"
+                        FontFamily="Comic Sans MS"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        FontSize="13"
+                        Margin="5" 
+                        Background="red"
+                        Width="215" 
+                    />
 
-            <!--Side bar-->
-            <Button Margin="10" Grid.Column="0" Grid.Row="3" x:Name="registrationButton" Height="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   REGISTRATION" Width="auto" Height="18"/>
+            <Frame Grid.Row="2"
+                   Grid.RowSpan="3"
+                   Grid.Column="1"
+                   x:Name="myDashboardFrame" 
+                    
+                   NavigationUIVisibility="Hidden"
+            />
+
+
+            <!-- Side bar-->
+            <StackPanel Grid.Row="2" 
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Center" 
+                        Width="182" Height="233">
+
+                <Button Content="HOME"
+                        x:Name="homeButton"
+                        Margin="0 20 0 0"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+                <Button Content="CREATE CLASS"
+                        x:Name="createClassButton"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        Margin="0 20 0 0"
+                        
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+                <Button Content="PAYMENTS"
+                        x:Name="paymentButton"
+                        Margin="0 20 0 0"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+                <Button Content="STUDENTS"
+                        x:Name="studentButton"
+                        Margin="0 20 0 0"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+
+            </StackPanel>
+
+
+            <Button Content="LOGOUT"
+                        x:Name="logoutButton"
+                        Margin="2"
+                        Grid.Row="4"
+                        VerticalAlignment="Center"
+                        
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        FontFamily="Comic Sans MS"
+                        FontSize="20" 
+                />
+
+            <!-- Styling part-->
+            <Grid Grid.Column="1"
+                  Margin="478,-292,-928,202"
+                  Panel.ZIndex="-1" Grid.RowSpan="3">
+
+                <Grid.RenderTransform>
+                    <RotateTransform Angle="50"/>
+                </Grid.RenderTransform>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="-350 250 -255 -250">
+
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="150 0 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                Margin="150 0 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="0 0 0 50"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20" Opacity="0.5"/>
+                    </StackPanel>
                 </StackPanel>
-            </Button>
-            <Button Margin="10" Grid.Column="0" Grid.Row="4" x:Name="contactButton" Height="auto" Width="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   CONTACT" Width="102" Height="18"/>
-                </StackPanel>
-            </Button>
-            <Button Margin="10" Grid.Column="0" Grid.Row="10" x:Name="exitButton" Height="auto" Width="auto">
-                <StackPanel Orientation="horizontal" Width="auto">
-                    <ContentControl Content="   EXIT" Width="69" Height="18"/>
-                </StackPanel>
-            </Button>
-            <!--end of sice bar-->
 
-
-
-
-            <!--content Section-->
-            <Grid HorizontalAlignment="Left" Height="535" Background="AliceBlue" VerticalAlignment="Top" Width="950" Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Grid.RowSpan="8" />
-
-
+            </Grid>
 
         </Grid>
 
