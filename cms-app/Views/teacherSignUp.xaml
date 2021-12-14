@@ -131,7 +131,7 @@
                     FontSize="16"
                     MaxWidth="400"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:HintAssist.Hint="E-mail"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
@@ -145,16 +145,13 @@
                     materialDesign:TextFieldAssist.HasClearButton="True" 
                     Margin="5"
                  />
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                    TextWrapping="Wrap"
+                <PasswordBox 
+                    Style="{StaticResource MaterialDesignFilledPasswordBox}"
+                    FontSize="16" 
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="E-mail"
+                    materialDesign:HintAssist.Hint="Password"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
-                   
                  />
 
 
@@ -169,7 +166,7 @@
                     FontSize="16"
                     MaxWidth="400"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="First Name"
+                    materialDesign:HintAssist.Hint="Last Name"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                     
@@ -180,21 +177,10 @@
                     FontSize="16"
                     MaxWidth="400"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:HintAssist.Hint="Contact No:"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
-                <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="5"
-                 />
-
                 <DatePicker 
                     Style="{StaticResource MaterialDesignFilledDatePicker}" 
                     FontSize="16"
@@ -203,6 +189,19 @@
                     Margin="5"
 
                 />
+
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Confirm Password"
+                    materialDesign:TextFieldAssist.HasClearButton="True" 
+                    Margin="5"
+                 />
+
+               
 
             </StackPanel>
 
