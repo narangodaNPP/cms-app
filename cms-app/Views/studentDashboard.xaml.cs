@@ -28,5 +28,10 @@ namespace cms_app.Views
         {
 
         }
+
+        private void payButton_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

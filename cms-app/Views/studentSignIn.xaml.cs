@@ -26,12 +26,7 @@ namespace cms_app.Views
         }
 
 
-        private void signinButton_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-            
-        }
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -39,11 +34,20 @@ namespace cms_app.Views
 
             if (LoginLogCtx.Students.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
             {
+
+
+                var user = LoginLogCtx.Students.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault();
+                Global.userid = user.studentID;
+                Global.st = "s";
+
+
                 studentDashboard studDashboard = new studentDashboard();
                 studDashboard.Show();
                 this.Close();
 
             }
+           
+
 
         }
     }
