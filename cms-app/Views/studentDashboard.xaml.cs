@@ -23,5 +23,10 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
+
+        private void myDashboardFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
     }
 }
