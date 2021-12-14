@@ -64,7 +64,7 @@
                     MaxWidth="400"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Class Day"
-                    materialDesign:TextFieldAssist.HasClearButton="True" TextChanged="TextBox_TextChanged"
+                    materialDesign:TextFieldAssist.HasClearButton="True" 
                  />
 
         </StackPanel>
