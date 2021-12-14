@@ -88,35 +88,38 @@
             <!-- Side bar-->
             <StackPanel Grid.Row="2"
                         Grid.Column="0" 
-                        Margin="2"
                         VerticalAlignment="Center"
-                        HorizontalAlignment="Center">
-                
-                <Button Content="Personal Details"
+                        HorizontalAlignment="Center" 
+                        Width="160">
+
+                <Button Content="PERSONALDETAILS"
                         x:Name="personButton"
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" Click="personButton_Click"
+                        FontSize="13" 
+                        Click="personButton_Click"
                 />
-                <Button Content="Course Details"
+                <Button Content="COURSE DETAILS"
                         x:Name="courseButton"
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                       Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" Click="courseButton_Click"
+                        FontSize="13" 
+                        Click="courseButton_Click"
                 />
-                <Button Content="Card Details"
+                <Button Content="CARD DETAILS"
                         x:Name="cardButton"
                         Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" Click="cardButton_Click"
+                        FontSize="13" 
+                        Click="cardButton_Click"
                 />
 
             </StackPanel>
 
-            
+
 
 
             <!-- Styling part-->
