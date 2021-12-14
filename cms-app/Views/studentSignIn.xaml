@@ -108,23 +108,25 @@
                     />
 
                     <Button Content="SIGN-IN"
+                            x:Name="btnStudentSignin"
                             FontFamily="Comic Sans MS"
                             FontSize="13"
                             FontWeight="Medium"
                             MaxWidth="200"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Margin="10" 
-                            Click="signin_Click"
+                            Margin="10" Click="btnStudentSignin_Click" 
+                           
                             />
 
                     <Button Content="Not a member, SIGN-UP"
+                           x:Name="btnStudentSignup"
                            FontSize="13"
                            FontFamily="Comic Sans MS"
                            FontWeight="Medium"
                            Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                            materialDesign:ButtonAssist.CornerRadius="10"
-                           Margin="10"
-                           Click="signup_click"
+                           Margin="10" Click="btnStudentSignup_Click"
+                         
                           />
 
                 </StackPanel>
