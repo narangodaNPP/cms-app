@@ -102,22 +102,26 @@
                             Margin="20"
                     />
 
-                    <Button Content="SIGN-IN"
+                    <Button Content="SIGN-IN as TEACHER"
+                            x:Name="btnTeacherSignin"
                             FontFamily="Comic Sans MS"
                             FontSize="13"
                             FontWeight="Medium"
                             MaxWidth="200"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Margin="10" RenderTransformOrigin="0.669,0.5" Click="Button_Click"
+                            Margin="10" 
+                            RenderTransformOrigin="0.669,0.5" Click="btnTeacherSignin_Click" 
+                            
                             />
 
                     <Button Content="Not a member, SIGN-UP as Teacher"
+                            x:Name="btnTeacherSignup"
                            FontSize="13"
                            FontFamily="Comic Sans MS"
                            FontWeight="Medium"
                            Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                            materialDesign:ButtonAssist.CornerRadius="10"
-                           Margin="10"
+                           Margin="10" Click="btnTeacherSignup_Click"
                           />
 
                 </StackPanel>

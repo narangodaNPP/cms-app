@@ -84,7 +84,7 @@
 
 
             <Button Content="SIGN-UP as TEACHER"
-                x:Name="btnSignup"
+                x:Name="btnTeacherSignup"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 FontFamily="Comic Sans MS"
@@ -94,12 +94,12 @@
                 FontWeight="Medium"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
-                MinWidth="200" 
-                Click="signup_Click" 
+                MinWidth="200" Click="btnTeacherSignup_Click" 
+                
                
                 />
             <Button Content="Allready a member, SIGN-IN"
-                x:Name="btnSignin"
+                x:Name="btnTeacherSignin"
                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
@@ -111,8 +111,7 @@
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth ="300"
                 Margin="335,0,0,5"
-                MinWidth="200"
-                Click="signin_Click"
+                MinWidth="200" Click="btnTeacherSignin_Click"
                 />
 
 

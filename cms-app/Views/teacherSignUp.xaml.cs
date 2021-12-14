@@ -27,9 +27,8 @@ namespace cms_app.Views
         }
 
  
-        public void add()
-{
-   DatabaseRepository repository = new DatabaseRepository();
+        public void add(){
+        DatabaseRepository repository = new DatabaseRepository();
 
         teacher Teacher = new teacher()
         {
@@ -51,17 +50,17 @@ namespace cms_app.Views
         this.Close();
         }
 
-        private void signup_Click(object sender, RoutedEventArgs e)
+
+        private void btnTeacherSignup_Click(object sender, RoutedEventArgs e)
         {
             add();
         }
 
-        private void signin_click(object sender, RoutedEventArgs e)
+        private void btnTeacherSignin_Click(object sender, RoutedEventArgs e)
         {
             teacherSignIn signin = new teacherSignIn();
             signin.Show();
             this.Close();
         }
-       
     }
 }
