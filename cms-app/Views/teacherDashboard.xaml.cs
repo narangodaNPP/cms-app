@@ -23,5 +23,25 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
+
+        private void createClassButton_Click(object sender, RoutedEventArgs e)
+        {
+            myDashboardFrame.Content = new create_class();
+        }
+
+        private void paymentButton_Click(object sender, RoutedEventArgs e)
+        {
+            myDashboardFrame.Content = new payments_view();
+        }
+
+        private void studentButton_Click(object sender, RoutedEventArgs e)
+        {
+            myDashboardFrame.Content = new students_view();
+        }
+
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            myDashboardFrame.Content = new teacher_home();
+        }
     }
 }

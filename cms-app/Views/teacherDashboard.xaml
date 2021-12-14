@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
         xmlns:local="clr-namespace:cms_app.Views"
         mc:Ignorable="d"
         Title="teacherDashboard" 
@@ -68,7 +69,7 @@
                            Height="50"
                            Width="50"/>
 
-                   
+
                 </Grid>
 
 
@@ -90,7 +91,7 @@
                    Grid.RowSpan="3"
                    Grid.Column="1"
                    x:Name="myDashboardFrame" 
-                    
+                   Source="teacher_home.xaml" 
                    NavigationUIVisibility="Hidden"
             />
 
@@ -106,7 +107,7 @@
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="20" Click="homeButton_Click" 
                 />
                 <Button Content="CREATE CLASS"
                         x:Name="createClassButton"
@@ -114,21 +115,21 @@
                         Margin="0 20 0 0"
                         
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="20" Click="createClassButton_Click" 
                 />
                 <Button Content="PAYMENTS"
                         x:Name="paymentButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="20" Click="paymentButton_Click" 
                 />
                 <Button Content="STUDENTS"
                         x:Name="studentButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="20" Click="studentButton_Click" 
                 />
 
             </StackPanel>
