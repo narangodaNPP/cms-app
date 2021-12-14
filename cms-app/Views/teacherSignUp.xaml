@@ -93,7 +93,7 @@
                 FontWeight="Medium"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
-                MinWidth="200" 
+                MinWidth="200" Click="Button_Click" 
                
                 />
             <Button Content="Allready a member, SIGN-IN"
@@ -126,6 +126,7 @@
                     Margin="5" 
                 />
                 <TextBox 
+                    x:Name="txtemail"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
@@ -135,7 +136,8 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
-                <TextBox 
+                <TextBox
+                    x:Name="txtsubject"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
@@ -146,6 +148,7 @@
                     Margin="5"
                  />
                 <PasswordBox 
+                    x:Name="password"
                     Style="{StaticResource MaterialDesignFilledPasswordBox}"
                     FontSize="16" 
                     MaxWidth="400"
@@ -161,6 +164,7 @@
             <StackPanel Grid.Row="2"
                         Grid.Column="1">
                 <TextBox 
+                    x:Name="txtlastname"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
@@ -172,6 +176,7 @@
                     
                 />
                 <TextBox 
+                    x:Name="txtcontactno"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
@@ -182,6 +187,7 @@
                     Margin="5"
                  />
                 <DatePicker 
+                    x:Name="dateofbirth"
                     Style="{StaticResource MaterialDesignFilledDatePicker}" 
                     FontSize="16"
                     materialDesign:HintAssist.Hint="Date of Birth" 
@@ -191,6 +197,7 @@
                 />
 
                 <TextBox 
+                    x:Name="confirmpasssword"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
