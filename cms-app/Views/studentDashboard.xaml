@@ -4,7 +4,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:cms_app.Views"
+        xmlns:local="clr-namespace:cms_app.Views" 
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         WindowStyle="None"
         Title="studentDashboard" 
@@ -75,24 +76,24 @@
 
             </Border>
 
-            <Label Content="K.K. Ariyasinghe"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        x:Name="personButton"
-                        FontFamily="Comic Sans MS"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        FontSize="13"
-                        Margin="555,0,0,0" 
-                        
-                        Width="132" 
-                    />
+            <materialDesign:Chip
+                Content="Pasan Narangoda"
+                Grid.Row="1"
+                Grid.Column="2"
+                FontFamily="Comic Sans MS"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Center"
+                
+                FontSize="18"
+                Margin="20 0 40 0">
+                
+            </materialDesign:Chip>
+
 
             <Frame Grid.Row="2"
                    Grid.RowSpan="3"
                    Grid.Column="1"
                    x:Name="myStudentDashboardFrame" 
-                    
                    NavigationUIVisibility="Hidden"
             />
 
