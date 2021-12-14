@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         WindowStyle="None"
         Title="Sign In" 
-        Height="500" 
+        Height="508" 
         Width="900"
         Background="Transparent"
         AllowsTransparency="True"
@@ -82,8 +82,9 @@
                 Text="TEACHER SIGN-UP"
                 />
 
-            <Button Content="SIGN-UP as STUDENT"
-                VerticalAlignment="Top"
+
+            <Button Content="SIGN-UP as TEACHER"
+                VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 FontFamily="Comic Sans MS"
                 FontSize="13"
@@ -93,12 +94,12 @@
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
                 MinWidth="200" 
-                Margin="10"
+               
                 />
             <Button Content="Allready a member, SIGN-IN"
                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                 VerticalAlignment="Bottom"
-                HorizontalAlignment="Center"
+                HorizontalAlignment="Left"
                 Grid.Row="3"
                 Grid.ColumnSpan="2"
                 FontSize="13"
@@ -106,7 +107,7 @@
                 FontWeight="Medium"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth ="300"
-                Margin="10"
+                Margin="335,0,0,5"
                 MinWidth="200"
                 />
 
@@ -200,7 +201,7 @@
                     Margin="5"
                  />
 
-               
+
 
             </StackPanel>
 
@@ -264,6 +265,15 @@
                 </StackPanel>
 
             </Grid>
+            
+            <CheckBox Content="I agree to all terms and conditions" 
+                      x:Name="checkboxAgree"
+                      HorizontalAlignment="Center" 
+                      Margin="0,11,0,0" 
+                      Grid.Row="3" 
+                      Width="220"
+                      VerticalAlignment="Top" Grid.ColumnSpan="2"
+                   />
 
         </Grid>
 
