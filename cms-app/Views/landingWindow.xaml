@@ -17,9 +17,6 @@
         VerticalAlignment="Center" 
         WindowStartupLocation="CenterScreen" >
 
-
-
-
     <Border CornerRadius="20" BorderBrush="#eceff1" BorderThickness='8'>
 
         <Grid Background="#eceff1">
