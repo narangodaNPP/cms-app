@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace cms_app.Models
 {
-    class Classes
+    public class Classes
     {
         [Key]
-        public string classID { get; set; }
+        public int classID { get; set; }
         
         [Required]
         public string subject { get; set; }
