@@ -30,7 +30,8 @@
 
         <StackPanel Grid.Column="0"
                     Margin="10,10,10,10" 
-                    Grid.Row ="1">
+                    Grid.Row ="1"
+                    VerticalAlignment="Center">
             <TextBox 
                 Style="{StaticResource MaterialDesignFilledTextBox}"
                 AcceptsReturn="True"
@@ -47,44 +48,32 @@
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
-                FontFamily="Comic Sans MS"
+                    FontFamily="Comic Sans MS"
                     MaxWidth="400"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:HintAssist.Hint="E-mail"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                  />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                FontFamily="Comic Sans MS"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="10"
-                 />
-              
+
+
         </StackPanel>
 
         <StackPanel Grid.Column ="1"
                     Margin="10,10,10,10" 
                     Grid.Row ="1"
-                    Grid.RowSpan="2">
+                    VerticalAlignment="Center">
             <TextBox 
-            Style="{StaticResource MaterialDesignFilledTextBox}"
-            AcceptsReturn="True"
-            FontSize="16"
-            Margin="10"
-            FontFamily="Comic Sans MS"
-            MaxWidth="400"
-            TextWrapping="Wrap"
-            materialDesign:HintAssist.Hint="First Name"
-            materialDesign:TextFieldAssist.HasClearButton="True"
-            
-                    
-        />
+                Style="{StaticResource MaterialDesignFilledTextBox}"
+                AcceptsReturn="True"
+                FontSize="16"
+                Margin="10"
+                FontFamily="Comic Sans MS"
+                MaxWidth="400"
+                TextWrapping="Wrap"
+                materialDesign:HintAssist.Hint="Last Name"
+                materialDesign:TextFieldAssist.HasClearButton="True"                  
+            />
             <TextBox 
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
@@ -92,34 +81,26 @@
                 FontFamily="Comic Sans MS"
                     MaxWidth="400"
                     TextWrapping="Wrap"
-                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:HintAssist.Hint="Registraion Number"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                  />
-            <TextBox 
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                FontFamily="Comic Sans MS"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Contact No:"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="10"
-                 />
-            
-            <Button 
-                    x:Name="nextButton"
-                    Content="Next"
-                    MaxWidth="200"
-                    FontFamily="Comic Sans MS"
-                    Margin="10 20 20 0"
-                    HorizontalAlignment="Right"
-                    Grid.Row ="3"/>
+
+
+
 
 
         </StackPanel>
-
+        <Button 
+            x:Name="nextButton"
+            Content="Next"
+            MaxWidth="200"
+            FontFamily="Comic Sans MS"
+            Margin="10 20 20 0"
+            HorizontalAlignment="Right"
+            Grid.Row ="2"
+            Grid.Column="0"
+            Grid.ColumnSpan="2"/>
 
     </Grid>
 </Page>
