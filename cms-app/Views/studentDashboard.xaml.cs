@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,22 @@ namespace cms_app.Views
         public studentDashboard()
         {
             InitializeComponent();
+            retrew();
+        }
+        public void retrew()
+        {
+
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            if (LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault() != null)
+            {
+
+
+                var user = LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault();
+
+                txtname.Content = user.firstName;
+
+            }
         }
 
         private void myDashboardFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)

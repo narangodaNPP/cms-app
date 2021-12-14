@@ -75,10 +75,10 @@
 
             </Border>
 
-            <Label Content="Dananjaya kumara"
+            <Label
+                   x:Name="txtname"
                         Grid.Row="1"
                         Grid.Column="2"
-                        x:Name="personButton"
                         FontFamily="Comic Sans MS"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
