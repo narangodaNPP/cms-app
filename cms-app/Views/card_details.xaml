@@ -67,7 +67,7 @@
         </StackPanel>
 
         <StackPanel Grid.Column ="1"
-                    Margin="10,10,10,10" 
+                    Margin="10,5,10,0" 
                     Grid.Row ="1"
                     Grid.RowSpan="2">
             <StackPanel Orientation="Horizontal">
@@ -76,7 +76,7 @@
                          HorizontalAlignment="Left"
             />
                 <RadioButton Margin="23"
-                         Content="VISA"                    
+                         Content="MASTER CARD"                    
                          HorizontalAlignment="Right"
             />
             </StackPanel>
@@ -91,22 +91,35 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                  />
-            <CheckBox Content="I agree to terms and conditions of band"
+            <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    FontFamily="Comic Sans MS"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Security Code"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="10"
+                 />
+            
+        </StackPanel>
+        <CheckBox Content="I agree to terms and conditions of band"
                       FontFamily="Comic Sans MS"
                       FontSize="15"
                       Margin="20"
+                      Grid.Row="2"
+                      Grid.Column ="0"
                  />
 
-            <Button 
+        <Button 
                     Content="Next"
                     MaxWidth="200"
                     FontFamily="Comic Sans MS"
-                Margin="10 20 20 0"
+                    Margin="10 20 20 0"
                     HorizontalAlignment="Right"
-                    Grid.Row ="3"/>
-
-
-        </StackPanel>
+                    Grid.Row ="2"
+                    Grid.Column="1"/>
 
 
     </Grid>
