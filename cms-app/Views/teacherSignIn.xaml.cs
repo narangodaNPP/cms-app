@@ -31,6 +31,11 @@ namespace cms_app.Views
         {
             if (LoginLogCtx.teachers.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
             {
+
+                var user = LoginLogCtx.teachers.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault();
+                Global.userid = user.teacherID;
+                Global.st = "t";
+
                 teacherDashboard teachDashboard = new teacherDashboard();
                 teachDashboard.Show();
                 this.Close();
