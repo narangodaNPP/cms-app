@@ -88,7 +88,7 @@
                             FontSize="16"
                             MaxWidth="400"
                             TextWrapping="Wrap"
-                            materialDesign:HintAssist.Hint="First Name"
+                            materialDesign:HintAssist.Hint="E-mail"
                             materialDesign:TextFieldAssist.HasClearButton="True"
                             Margin="20"
                     

@@ -15,8 +15,9 @@
         Background="Transparent"
         AllowsTransparency="True"
         WindowStartupLocation="CenterScreen" 
-        SizeToContent="Manual" 
-        ResizeMode="NoResize">
+        SizeToContent="Manual"
+        ResizeMode="NoResize"
+    >
 
     <Border CornerRadius="20" 
             BorderBrush="#eceff1" 
