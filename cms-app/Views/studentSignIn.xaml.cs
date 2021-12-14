@@ -28,7 +28,7 @@ namespace cms_app.Views
 
        
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void signin_Click(object sender, RoutedEventArgs e)
         {
             DatabaseRepository LoginLogCtx = new DatabaseRepository();
 
@@ -49,6 +49,13 @@ namespace cms_app.Views
            
 
 
+        }
+
+        private void signup_click(object sender, RoutedEventArgs e)
+        {
+            signUp signup = new signUp();
+            signup.Show();
+            this.Close();
         }
     }
 }
