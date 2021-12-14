@@ -19,10 +19,12 @@ namespace cms_app.Models
         public string teacher { get; set; }
 
         [Required]
-        public string date { get; set; }
+        public string day { get; set; }
 
         [Required]
         public string time { get; set; }
+        public string duration { get; set; }
+        public string classfree { get; set; }
 
 
 

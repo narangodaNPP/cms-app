@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,27 @@ namespace cms_app.Views
         public create_class()
         {
             InitializeComponent();
+        }
+        public void add()
+        {
+            DatabaseRepository repository = new DatabaseRepository();
+
+            Allclasses allclasses = new Allclasses()
+            {
+
+
+
+                subject = txtsubject.Text,
+                day = txtday.Text,
+                time = txttime.Text,
+                duration = txtduration.Text,
+                classfree = txtclassfree.Text,
+
+
+
+            };
+            repository.classes_set.Add(allclasses);
+            repository.SaveChanges();
         }
     }
 }
