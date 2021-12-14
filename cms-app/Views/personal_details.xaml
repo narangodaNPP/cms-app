@@ -33,6 +33,7 @@
                     Grid.Row ="1"
                     VerticalAlignment="Center">
             <TextBox 
+                x:Name="txtfirstname"
                 Style="{StaticResource MaterialDesignFilledTextBox}"
                 AcceptsReturn="True"
                 FontFamily="Comic Sans MS"

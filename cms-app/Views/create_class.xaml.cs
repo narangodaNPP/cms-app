@@ -45,6 +45,8 @@ namespace cms_app.Views
             };
             repository.classes_set.Add(allclasses);
             repository.SaveChanges();
+
+            MessageBox.Show("Successfully Registerd!!");
         }
     }
 }

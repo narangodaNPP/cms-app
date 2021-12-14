@@ -35,5 +35,10 @@ namespace cms_app.Views
         {
             myStudentDashboardFrame.Content = new student_class_view();
         }
+
+        private void payButton_Click(object sender, RoutedEventArgs e)
+        {
+           
+        }
     }
 }

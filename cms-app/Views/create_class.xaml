@@ -65,8 +65,7 @@
                     MaxWidth="400"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Class Day"
-                    materialDesign:TextFieldAssist.HasClearButton="True"
-                    Margin="10"
+                    materialDesign:TextFieldAssist.HasClearButton="True" 
                  />
             <TextBox
                 x:Name="txtduration"

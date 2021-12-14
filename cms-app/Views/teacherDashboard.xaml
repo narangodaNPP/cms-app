@@ -74,16 +74,16 @@
 
 
             </Border>
-            <Label Content="name of the user should be here"
+            <Label Content="MR. Suresh Madawalage"
                         Grid.Row="1"
                         Grid.Column="2"
                         x:Name="personButton"
                         FontFamily="Comic Sans MS"
                         HorizontalAlignment="Right"
                         VerticalAlignment="Center"
-                        FontSize="13"
+                        FontSize="15"
                         Margin="5" 
-                        Background="red"
+                        
                         Width="215" 
                     />
 
