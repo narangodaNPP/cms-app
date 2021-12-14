@@ -9,8 +9,8 @@ using cms_app.Database;
 namespace cms_app.Migrations
 {
     [DbContext(typeof(DatabaseRepository))]
-    [Migration("20211214052703_init")]
-    partial class init
+    [Migration("20211214060956_asd")]
+    partial class asd
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace cms_app.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("cms_app.Models.Classes", b =>
+            modelBuilder.Entity("cms_app.Models.Allclasses", b =>
                 {
                     b.Property<int>("classID")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace cms_app.Migrations
 
                     b.HasKey("classID");
 
-                    b.ToTable("classess");
+                    b.ToTable("classes_set");
                 });
 
             modelBuilder.Entity("cms_app.Models.Payment", b =>

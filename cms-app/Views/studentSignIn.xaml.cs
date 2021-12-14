@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,20 +25,26 @@ namespace cms_app.Views
             InitializeComponent();
         }
 
+
         private void signinButton_Click(object sender, RoutedEventArgs e)
         {
-            studentDashboard studDashboard = new studentDashboard();
-            studDashboard.Show();
-            this.Close();
+            
+
+            
         }
 
-      
-
-        private void signupButton_Click(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-            signUp signup = new signUp();
-            signup.Show();
-            this.Close();
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            if (LoginLogCtx.Students.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
+            {
+                studentDashboard studDashboard = new studentDashboard();
+                studDashboard.Show();
+                this.Close();
+
+            }
+
         }
     }
 }

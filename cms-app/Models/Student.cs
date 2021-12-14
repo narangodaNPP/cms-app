@@ -25,7 +25,9 @@ namespace cms_app.Models
 
         [Required]
         public string password { get; set; }
-        public int age { get; set; }
+        public DateTime dateofbirth { get; set; }
         public string myclasses { get; set; }
+
+       
     }
 }

@@ -25,24 +25,24 @@ namespace cms_app
         public MainWindow()
         {
             InitializeComponent();
-            createStudent();
+            // createStudent();
         }
 
-        public void createStudent()
-        {
-            DatabaseRepository repository = new DatabaseRepository();
-            Student student1 = new Student()
-            {
-                firstName = "Achila",
-                lastName = "Sandeep",
-                email = "achilasandeep@gmail.com",
-                contactNo = 0123456789,
-                password = "achila123",
-                age = 23
+        /*  public void createStudent()
+          {
+              DatabaseRepository repository = new DatabaseRepository();
+              Student student1 = new Student()
+              {
+                  firstName = "Achila",
+                  lastName = "Sandeep",
+                  email = "achilasandeep@gmail.com",
+                  contactNo = 0123456789,
+                  password = "achila123",
+                  dateofbirth = 23,
 
-            };
+              };
 
-            
-        }
+                      }
+      }*/
     }
 }

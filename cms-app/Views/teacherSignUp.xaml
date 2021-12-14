@@ -114,6 +114,7 @@
             <StackPanel Grid.Row="2"
                         Grid.Column="0">
                 <TextBox 
+                    x:Name="txtfirstname"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"

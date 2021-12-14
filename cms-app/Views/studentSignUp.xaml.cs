@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,11 +25,38 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
-   
-    
-    
-    
-    
-    
+        public void add()
+        {
+            DatabaseRepository repository = new DatabaseRepository();
+
+            Student student = new Student()
+            {
+                
+
+                
+                firstName = txtfirstname.Text,
+                lastName  = txtlastname.Text,
+                email     = txtemail.Text,
+                contactNo = Convert.ToInt32(txtcontactno.Text),
+                password  = txtpassword.Password,
+                dateofbirth = txtdateofbirth.SelectedDate.Value,
+                             
+
+
+
+
+
+            };
+            repository.Students.Add(student);
+            repository.SaveChanges();
+
+            MessageBox.Show("Successfully Registerd!!");
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            add();
+        }
     }
 }

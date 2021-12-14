@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace cms_app.Models
 {
-    public class Classes
+    public class Allclasses
     {
         [Key]
         public int classID { get; set; }
