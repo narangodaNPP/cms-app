@@ -1,0 +1,278 @@
+﻿<Window x:Class="cms_app.Views.teacherSignUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:cms_app.Views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        mc:Ignorable="d"
+        WindowStyle="None"
+        Title="Sign In" 
+        Height="500" 
+        Width="900"
+        Background="Transparent"
+        AllowsTransparency="True"
+        ResizeMode="NoResize" 
+        WindowStartupLocation="CenterScreen">
+    <Border CornerRadius="20" 
+            BorderBrush="#eceff1" 
+            BorderThickness='8'>
+
+        <Grid Background="#eceff1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="267*"/>
+                <RowDefinition Height="107*" />
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Border Background="White" 
+                    CornerRadius="10" 
+                    Grid.ColumnSpan="2">
+
+                <Grid Grid.ColumnSpan="2" 
+                      Background="Transparent">
+
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="E-CLASS"
+                            Foreground="Black"
+                            FontFamily="Comic Sans MS"
+                            FontSize="30"
+                            Padding="50 0 0 0"
+                            FontWeight="Bold"
+                            VerticalAlignment="Center"
+                            HorizontalAlignment="Left" 
+                            Grid.ColumnSpan="3" 
+                            Margin="40,0,0,0"/>
+                    <Image
+                           Source="../Icons/Logo.ico" 
+                           Grid.Row="1"
+                           Height="50"
+                           Width="50"/>
+                </Grid>
+
+
+            </Border>
+            <TextBlock
+                Style="{StaticResource MaterialDesignHeadline4TextBlock}"
+                FontFamily="Comic Sans MS"
+                Grid.Row="1"
+                FontSize="25"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="TEACHER SIGN-UP"
+                />
+
+            <Button Content="SIGN-UP as STUDENT"
+                VerticalAlignment="Top"
+                HorizontalAlignment="Center"
+                FontFamily="Comic Sans MS"
+                FontSize="13"
+                Grid.Row ="3"
+                Grid.ColumnSpan="2"
+                FontWeight="Medium"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                MaxWidth="300"
+                MinWidth="200" 
+                Margin="10"
+                />
+            <Button Content="Allready a member, SIGN-IN"
+                Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
+                VerticalAlignment="Bottom"
+                HorizontalAlignment="Center"
+                Grid.Row="3"
+                Grid.ColumnSpan="2"
+                FontSize="13"
+                FontFamily="Comic Sans MS"
+                FontWeight="Medium"
+                materialDesign:ButtonAssist.CornerRadius="10"
+                MaxWidth ="300"
+                Margin="10"
+                MinWidth="200"
+                />
+
+
+            <StackPanel Grid.Row="2"
+                        Grid.Column="0">
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="First Name"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="5"
+                    
+                />
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="5"
+                 />
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Contact No:"
+                    materialDesign:TextFieldAssist.HasClearButton="True" 
+                    Margin="5"
+                 />
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="E-mail"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="5"
+                   
+                 />
+
+
+
+            </StackPanel>
+
+            <StackPanel Grid.Row="2"
+                        Grid.Column="1">
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="First Name"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="5"
+                    
+                />
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Last Name"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="5"
+                 />
+                <TextBox 
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    TextWrapping="Wrap"
+                    MaxWidth="400"
+                    materialDesign:HintAssist.Hint="Contact No:"
+                    materialDesign:TextFieldAssist.HasClearButton="True" 
+                    Margin="5"
+                 />
+
+                <DatePicker 
+                    Style="{StaticResource MaterialDesignFilledDatePicker}" 
+                    FontSize="16"
+                    materialDesign:HintAssist.Hint="Date of Birth" 
+                    MaxWidth="400"
+                    Margin="5"
+
+                />
+
+            </StackPanel>
+
+
+            <!-- Styling part-->
+            <Grid Grid.Column="1"
+                  Margin="227,-257,-677,178"
+                  Panel.ZIndex="-1" 
+                  Grid.RowSpan="3">
+
+                <Grid.RenderTransform>
+                    <RotateTransform Angle="50"/>
+                </Grid.RenderTransform>
+
+                <StackPanel Orientation="Horizontal"
+                            Margin="-350 250 -255 -250">
+
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="150 0 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                Margin="150 0 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <Border Width="700"
+                                Height="35"
+                                Background="Aqua"
+                                Margin="0 0 0 50"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="YellowGreen"
+                                Margin="75 15 0 0"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="RosyBrown"
+                                CornerRadius="20" Opacity="0.5"/>
+                        <Border Width="700"
+                                Height="35"
+                                Background="NavajoWhite"
+                                Margin="0 15 0 30"
+                                CornerRadius="20" Opacity="0.5"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </Grid>
+
+        </Grid>
+
+
+
+
+
+    </Border>
+
+
+</Window>
