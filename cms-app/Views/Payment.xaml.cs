@@ -23,5 +23,20 @@ namespace cms_app.Views
         {
             InitializeComponent();
         }
+
+        private void personButton_Click(object sender, RoutedEventArgs e)
+        {
+            myFrame.Content = new personal_details(); 
+        }
+
+        private void courseButton_Click(object sender, RoutedEventArgs e)
+        {
+            myFrame.Content = new course_details();
+        }
+
+        private void cardButton_Click(object sender, RoutedEventArgs e)
+        {
+            myFrame.Content = new card_details();
+        }
     }
 }
