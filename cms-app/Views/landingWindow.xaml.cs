@@ -24,6 +24,18 @@ namespace cms_app.Views
             InitializeComponent();
         }
 
-        
+        private void btnStudent_Click(object sender, RoutedEventArgs e)
+        {
+            signIn studentlogin = new signIn();
+            studentlogin.Show();
+            this.Close();
+        }
+
+        private void btnTeacher_Click(object sender, RoutedEventArgs e)
+        {
+            teacherSignIn studentregister = new teacherSignIn();
+            studentregister.Show();
+            this.Close();
+        }
     }
 }

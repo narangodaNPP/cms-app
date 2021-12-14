@@ -41,9 +41,16 @@ namespace cms_app.Views
             }
         }
 
-        private void myDashboardFrame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
+       
 
+        private void homeButton_Click(object sender, RoutedEventArgs e)
+        {
+            //
+        }
+
+        private void classButton_Click(object sender, RoutedEventArgs e)
+        {
+            myStudentDashboardFrame.Content = new student_class_view();
         }
 
         private void payButton_Click(object sender, RoutedEventArgs e)
