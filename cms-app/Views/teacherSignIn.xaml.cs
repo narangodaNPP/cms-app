@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,19 @@ namespace cms_app.Views
         public teacherSignIn()
         {
             InitializeComponent();
+        }
+
+        DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (LoginLogCtx.teachers.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
+            {
+                studentDashboard studDashboard = new studentDashboard();
+                studDashboard.Show();
+                this.Close();
+
+            }
         }
     }
 }

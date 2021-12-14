@@ -9,7 +9,7 @@ namespace cms_app.Database
         public DbSet<Student> Students { get; set; }
         public DbSet<Payment> Payments { get; set; }
         public DbSet<teacher> teachers { get; set; }
-        public DbSet<Classes> classess { get; set; }
+        public DbSet<Allclasses> classes_set { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

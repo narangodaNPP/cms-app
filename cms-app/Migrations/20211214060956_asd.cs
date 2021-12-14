@@ -2,12 +2,12 @@
 
 namespace cms_app.Migrations
 {
-    public partial class init : Migration
+    public partial class asd : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "classess",
+                name: "classes_set",
                 columns: table => new
                 {
                     classID = table.Column<int>(type: "int", nullable: false)
@@ -19,7 +19,7 @@ namespace cms_app.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_classess", x => x.classID);
+                    table.PrimaryKey("PK_classes_set", x => x.classID);
                 });
 
             migrationBuilder.CreateTable(
@@ -85,7 +85,7 @@ namespace cms_app.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "classess");
+                name: "classes_set");
 
             migrationBuilder.DropTable(
                 name: "Payments");

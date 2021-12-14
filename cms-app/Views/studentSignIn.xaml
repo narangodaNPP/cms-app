@@ -83,6 +83,7 @@
                 <StackPanel Orientation="Vertical"
                             Margin="20 0 10 10">
                     <TextBox 
+                        x:Name="txtemail"
                             Style="{StaticResource MaterialDesignFilledTextBox}"
                             AcceptsReturn="True"
                             FontSize="16"
@@ -94,6 +95,7 @@
                     
                     />
                     <PasswordBox
+                        x:Name="txtpassword"
                             Style="{StaticResource MaterialDesignFilledPasswordBox}"
                             FontSize="16"
                             MaxWidth="400"
@@ -108,7 +110,7 @@
                             FontWeight="Medium"
                             MaxWidth="200"
                             materialDesign:ButtonAssist.CornerRadius="10"
-                            Margin="10"
+                            Margin="10" Click="Button_Click"
                             />
 
                     <Button Content="Not a member, SIGN-UP"
