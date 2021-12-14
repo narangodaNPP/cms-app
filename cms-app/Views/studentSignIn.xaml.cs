@@ -35,7 +35,6 @@ namespace cms_app.Views
             if (LoginLogCtx.Students.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
             {
 
-
                 var user = LoginLogCtx.Students.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault();
                 Global.userid = user.studentID;
                 Global.st = "s";
