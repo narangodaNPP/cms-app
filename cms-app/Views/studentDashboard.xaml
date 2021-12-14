@@ -68,13 +68,16 @@
                            Height="50"
                            Width="50"/>
 
-                    <Button Content="name"
+                    <Label Content="name of the user should be here"
                         Grid.Column="8"
                         x:Name="personButton"
                         FontFamily="Comic Sans MS"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
-                        FontSize="13" Grid.ColumnSpan="3" Margin="69,0,0,0" Width="155" 
+                        FontSize="13" 
+                        Grid.ColumnSpan="3" 
+                        Margin="9,0,0,0" 
+                        Width="215" 
                     />
                 </Grid>
 
