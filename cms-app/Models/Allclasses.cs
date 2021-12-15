@@ -12,16 +12,16 @@ namespace cms_app.Models
         [Key]
         public int classID { get; set; }
         
-        [Required]
+       
         public string subject { get; set; }
 
-        [Required]
-        public int teacherid { get; set; }
+        
+        public string teacher { get; set; }
 
-        [Required]
+        
         public string day { get; set; }
 
-        [Required]
+        
         public string classname { get; set; }
         
         public string classfree { get; set; }

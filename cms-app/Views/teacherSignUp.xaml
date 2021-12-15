@@ -142,7 +142,7 @@
                     Margin="5"
                  />
 
-                <ComboBox x:Name="Province" SelectedIndex="0" FontWeight="Bold" Height="23" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12" SelectionChanged="Province_SelectionChanged">
+                <ComboBox x:Name="Province" SelectedIndex="0" FontWeight="Bold" Height="23" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12" >
                     <ComboBox.ItemsSource>
                         <CompositeCollection>
                             <ComboBoxItem Visibility="Visible" Content="--Select your Subject--"/>
