@@ -23,7 +23,7 @@ namespace cms_app.Models
 
         [Required]
         public string classname { get; set; }
-        public string duration { get; set; }
+        
         public string classfree { get; set; }
 
 

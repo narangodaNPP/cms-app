@@ -53,10 +53,30 @@ namespace cms_app.Views
             MessageBox.Show("Successfully Registerd!!");
 
         }
+        public void saveid()
+        {
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            
+
+                var user = LoginLogCtx.Students.Where(a => a.email == txtemail.Text).FirstOrDefault();
+                Global.userid = user.studentID;
+                Global.st = "s";
+
+
+            
+
+
+
+        }
 
         private void signup_Click(object sender, RoutedEventArgs e)
         {
             add();
+            saveid();
+            studentDashboard sdash = new studentDashboard();
+            sdash.Show();
+            this.Close();
         }
 
         private void signin_Click(object sender, RoutedEventArgs e)

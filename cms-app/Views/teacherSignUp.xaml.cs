@@ -45,15 +45,31 @@ namespace cms_app.Views
 
         MessageBox.Show("Successfully Registerd!!");
 
-        teacherDashboard teasigni = new teacherDashboard();
-        teasigni.Show();
-        this.Close();
+        
+        }
+        public void saveid()
+        {
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            
+
+                var user = LoginLogCtx.teachers.Where(a => a.email == txtemail.Text).FirstOrDefault();
+                Global.userid = user.teacherID;
+                Global.st = "t";
+
+                
+
+            
         }
 
 
         private void btnTeacherSignup_Click(object sender, RoutedEventArgs e)
         {
             add();
+            saveid();
+            teacherDashboard teasigni = new teacherDashboard();
+            teasigni.Show();
+            this.Close();
         }
 
         private void btnTeacherSignin_Click(object sender, RoutedEventArgs e)

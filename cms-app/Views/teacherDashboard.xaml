@@ -149,7 +149,7 @@
                         VerticalAlignment="Center"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="17" 
+                        FontSize="17" Click="logoutButton_Click" 
                 />
 
             <!-- Styling part-->

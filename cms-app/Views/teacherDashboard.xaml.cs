@@ -23,6 +23,7 @@ namespace cms_app.Views
         public teacherDashboard()
         {
             InitializeComponent();
+            retrew();
         }
         public void retrew()
         {
@@ -33,9 +34,9 @@ namespace cms_app.Views
             {
 
 
-                var user = LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault();
+                var user = LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault();
 
-                txtname.Content = user.firstName;
+                txtname.Content = "Hello " + " " + user.firstName + " " + user.lastName;
 
             }
         }
@@ -57,6 +58,14 @@ namespace cms_app.Views
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
             myDashboardFrame.Content = new teacher_home();
+        }
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            landingWindow landing = new landingWindow();
+            landing.Show();
+            this.Close();
+
         }
     }
 }

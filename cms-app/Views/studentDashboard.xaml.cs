@@ -36,7 +36,7 @@ namespace cms_app.Views
 
                 var user = LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault();
 
-                txtname.Content = user.firstName ;
+                txtname.Content = "Hello " + " " + user.firstName  + " " + user.lastName ;
 
             }
         }
