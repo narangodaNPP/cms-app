@@ -29,6 +29,10 @@ namespace cms_app.Migrations
                     b.Property<string>("classfree")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("classname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("day")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -40,13 +44,8 @@ namespace cms_app.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("teacher")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("time")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<int>("teacherid")
+                        .HasColumnType("int");
 
                     b.HasKey("classID");
 

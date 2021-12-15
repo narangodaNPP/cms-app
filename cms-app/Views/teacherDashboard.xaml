@@ -76,7 +76,7 @@
             </Border>
             
             <materialDesign:Chip
-                Content="Achila Sandeep"
+                x:Name="txtname"
                 Grid.Row="1"
                 Grid.Column="2"
                 FontFamily="Comic Sans MS"

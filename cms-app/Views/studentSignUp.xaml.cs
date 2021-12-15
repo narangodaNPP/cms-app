@@ -61,7 +61,7 @@ namespace cms_app.Views
 
         private void signin_Click(object sender, RoutedEventArgs e)
         {
-            teacherSignIn signin = new teacherSignIn();
+            signIn signin = new signIn();
             signin.Show();
             this.Close();
         }

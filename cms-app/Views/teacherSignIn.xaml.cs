@@ -18,9 +18,9 @@ namespace cms_app.Views
     /// <summary>
     /// Interaction logic for teacherSignIn.xaml
     /// </summary>
-    public partial class teacherSignIn : Window
+    public partial class studentSignIn : Window
     {
-        public teacherSignIn()
+        public studentSignIn()
         {
             InitializeComponent();
         }

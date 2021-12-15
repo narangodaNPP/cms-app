@@ -33,7 +33,7 @@ namespace cms_app.Views
 
         private void btnTeacher_Click(object sender, RoutedEventArgs e)
         {
-            teacherSignIn studentregister = new teacherSignIn();
+            studentSignIn studentregister = new studentSignIn();
             studentregister.Show();
             this.Close();
         }

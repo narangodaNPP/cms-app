@@ -25,6 +25,7 @@ namespace cms_app.Views
         public create_class()
         {
             InitializeComponent();
+            
         }
         public void add()
         {
@@ -37,8 +38,9 @@ namespace cms_app.Views
 
                 subject = txtsubject.Text,
                 day = txtday.Text,
-                duration = txtduration.Text,
-                classfree = txtclassfree.Text,
+                classname = txtname.Text,
+                classfree = txtfree.Text,
+                teacherid = Global.userid,
 
 
 
@@ -46,7 +48,12 @@ namespace cms_app.Views
             repository.classes_set.Add(allclasses);
             repository.SaveChanges();
 
-            MessageBox.Show("Successfully Registerd!!");
+            MessageBox.Show("Successfully create class");
+        }
+
+        private void nextButton_Click(object sender, RoutedEventArgs e)
+        {
+            add();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace cms_app.Migrations
 {
@@ -13,9 +14,11 @@ namespace cms_app.Migrations
                     classID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    teacher = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    date = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    time = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    teacherid = table.Column<int>(type: "int", nullable: false),
+                    day = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    classname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    duration = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    classfree = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -53,7 +56,7 @@ namespace cms_app.Migrations
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     contactNo = table.Column<int>(type: "int", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    age = table.Column<int>(type: "int", nullable: false),
+                    dateofbirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     myclasses = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -72,7 +75,7 @@ namespace cms_app.Migrations
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     contactNo = table.Column<int>(type: "int", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    age = table.Column<int>(type: "int", nullable: false),
+                    dateofbirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     subject = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     myclasses = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },

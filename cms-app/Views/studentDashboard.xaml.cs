@@ -36,7 +36,7 @@ namespace cms_app.Views
 
                 var user = LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault();
 
-                txtname.Content = user.firstName;
+                txtname.Content = user.firstName ;
 
             }
         }
@@ -51,7 +51,16 @@ namespace cms_app.Views
             myStudentDashboardFrame.Content = new student_class_view();
         }
 
-        private void payButton_Click(object sender, RoutedEventArgs e)
+       
+
+        private void logoutButton_Click(object sender, RoutedEventArgs e)
+        {
+            landingWindow landing = new landingWindow();
+            landing.Show();
+            this.Close();
+        }
+
+        private void payButton1(object sender, RoutedEventArgs e)
         {
             Payment payment = new Payment();
             payment.Show();

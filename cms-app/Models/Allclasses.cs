@@ -16,13 +16,13 @@ namespace cms_app.Models
         public string subject { get; set; }
 
         [Required]
-        public string teacher { get; set; }
+        public int teacherid { get; set; }
 
         [Required]
         public string day { get; set; }
 
         [Required]
-        public string time { get; set; }
+        public string classname { get; set; }
         public string duration { get; set; }
         public string classfree { get; set; }
 

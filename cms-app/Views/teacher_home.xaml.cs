@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,21 @@ namespace cms_app.Views
         public teacher_home()
         {
             InitializeComponent();
+        }
+        public void retrew()
+        {
+
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            if (LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault() != null)
+            {
+
+
+                var user = LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault();
+
+                txtfirstname.Text = user.firstName;
+
+            }
         }
     }
 }
