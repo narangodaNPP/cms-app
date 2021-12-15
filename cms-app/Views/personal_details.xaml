@@ -93,7 +93,7 @@
 
         </StackPanel>
         <Button 
-            x:Name="nextButton"
+            x:Name="btnNext"
             Content="Next"
             MaxWidth="200"
             FontFamily="Comic Sans MS"
@@ -101,7 +101,8 @@
             HorizontalAlignment="Right"
             Grid.Row ="2"
             Grid.Column="0"
-            Grid.ColumnSpan="2"/>
+            Grid.ColumnSpan="2"
+            Click='btnNext_Click'/>
 
     </Grid>
 </Page>
