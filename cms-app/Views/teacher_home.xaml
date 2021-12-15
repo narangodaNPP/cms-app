@@ -126,13 +126,14 @@
                             Grid.Row="1"
                             Style="{StaticResource MaterialDesignLightSeparator}" />
                     <TextBlock
+                            x:Name="txtname"
                             Grid.Row="2"
                             Margin="16 0 16 8"
                             FontSize="20"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left"
                             Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="E-mail" />
+                             />
                     <StackPanel
                             Grid.Row="2"
                             Orientation="Horizontal"
@@ -146,13 +147,14 @@
                             Grid.Row="3"
                             Style="{StaticResource MaterialDesignLightSeparator}" />
                     <TextBlock
+                            x:Name="txtnumber"
                             Grid.Row="4"
                             Margin="16 0 16 8"
                             FontSize="20"
                             VerticalAlignment="Center"
                             HorizontalAlignment="Left"
                             Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="Contact No:" />
+                             />
                     <StackPanel
                             Grid.Row="4"
                             Orientation="Horizontal"

@@ -17,8 +17,9 @@ namespace cms_app.Models
 
         
         public string teacher { get; set; }
+        public int teacherID { get; set; }
 
-        
+
         public string day { get; set; }
 
         

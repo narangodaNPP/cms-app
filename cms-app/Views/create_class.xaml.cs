@@ -45,6 +45,7 @@ namespace cms_app.Views
                 classname = txtname.Text,
                 classfree = txtfree.Text,
                 teacher = teacher,
+                teacherID = Global.userid
 
 
 

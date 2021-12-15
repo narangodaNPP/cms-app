@@ -24,6 +24,7 @@ namespace cms_app.Views
         public teacher_home()
         {
             InitializeComponent();
+            load();
         }
         public void retrew()
         {
@@ -39,16 +40,17 @@ namespace cms_app.Views
                 //txtfirstname.Text = user.firstName;
 
             }
-            void load()
-            {
+            
+        }
+        public void load()
+        {
 
-                DatabaseRepository repository = new DatabaseRepository();
+            DatabaseRepository repository = new DatabaseRepository();
 
-                var cartList = repository.classes_set.ToList();
-                classgride.ItemsSource = cartList;
+            var cartList = repository.classes_set.Where(a => a.teacherID == Global.userid).ToList();
+            classgride.ItemsSource = cartList;
 
 
-            }
         }
     }
 }
