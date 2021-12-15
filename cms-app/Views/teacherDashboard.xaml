@@ -114,7 +114,7 @@
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" Click="homeButton_Click" 
+                        FontSize="17" Click="homeButton_Click" 
                 />
                 <Button Content="CREATE CLASS"
                         x:Name="createClassButton"
@@ -122,21 +122,21 @@
                         Margin="0 20 0 0"
                         
                         FontFamily="Comic Sans MS"
-                        FontSize="20" Click="createClassButton_Click" 
+                        FontSize="17" Click="createClassButton_Click" 
                 />
                 <Button Content="PAYMENTS"
                         x:Name="paymentButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" Click="paymentButton_Click" 
+                        FontSize="17" Click="paymentButton_Click" 
                 />
                 <Button Content="STUDENTS"
                         x:Name="studentButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" Click="studentButton_Click" 
+                        FontSize="17" Click="studentButton_Click" 
                 />
 
             </StackPanel>
@@ -149,7 +149,7 @@
                         VerticalAlignment="Center"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" 
+                        FontSize="17" 
                 />
 
             <!-- Styling part-->
