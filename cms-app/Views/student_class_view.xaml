@@ -35,23 +35,21 @@
                     HorizontalAlignment="Left" Margin="280,0,0,0" Width="240" 
                     >
             <ComboBox
-                x:Name="FilledComboBox"
+                x:Name="txtsubject"
                 Style="{StaticResource MaterialDesignFilledComboBox}"
                 IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
-                materialDesign:HintAssist.Hint="--Select Subject"
+                materialDesign:HintAssist.Hint="--Select Subject--"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
                 Width="200"
                 >
-                <ComboBoxItem
-                    Content="Item 1" />
-                <ComboBoxItem
-                    Content="Item 2" />
-                <ComboBoxItem
-                    Content="Item 3" />
+                <ComboBoxItem Content="Mathamatics"/>
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="Bioscince"/>
+                <ComboBoxItem Content="IT"/>
             </ComboBox>
             <Button Content="{materialDesign:PackIcon Magnify}"
-                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}" Click="Button_Click_1"
                     />
 
 

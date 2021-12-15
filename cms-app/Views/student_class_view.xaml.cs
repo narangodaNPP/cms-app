@@ -24,7 +24,8 @@ namespace cms_app.Views
         public student_class_view()
         {
             InitializeComponent();
-             
+            load();
+
         }
 
         public void load()
@@ -32,20 +33,19 @@ namespace cms_app.Views
 
             DatabaseRepository repository = new DatabaseRepository();
 
-            var cartList = repository.classes_set.Where(a => a.subject == FilledComboBox.Text).ToList();
-            classgride.ItemsSource = cartList;
+            var sub = repository.classes_set.Where(a => a.subject == txtsubject.Text).ToList();
+            classgride.ItemsSource = sub;
 
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             load();
         }
+        
 
-        private void classgride_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
     }
 }
