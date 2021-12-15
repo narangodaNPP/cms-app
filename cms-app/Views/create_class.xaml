@@ -46,7 +46,7 @@
                     Margin="10"  
                 />
                 <ComboBox
-                    x:Name="FilledComboBox"
+                    x:Name="txtsubject"
                     Style="{StaticResource MaterialDesignFilledComboBox}"
                     IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
                     materialDesign:HintAssist.Hint="--Select Subject"
@@ -54,12 +54,10 @@
                     FontSize="16"
                     MaxWidth="400"
                     Margin="10">
-                        <ComboBoxItem
-                            Content="Item 1" />
-                        <ComboBoxItem
-                            Content="Item 2" />
-                        <ComboBoxItem
-                            Content="Item 3" />
+                    <ComboBoxItem Content="Mathamatics"/>
+                    <ComboBoxItem Content="Chemistry"/>
+                    <ComboBoxItem Content="Bioscince"/>
+                    <ComboBoxItem Content="IT"/>
                 </ComboBox>
                 <TextBox 
                     x:Name="txtday"

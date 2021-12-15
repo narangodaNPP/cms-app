@@ -42,15 +42,15 @@
                 materialDesign:HintAssist.Hint="Some item"
                 Width="200"
                 Margin="10 0 10 0">
-                <ComboBoxItem
-                    Content="Item 1" />
-                <ComboBoxItem
-                    Content="Item 2" />
-                <ComboBoxItem
-                    Content="Item 3" />
+
+                <ComboBoxItem Content="Mathamatics"/>
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="Bioscince"/>
+                <ComboBoxItem Content="IT"/>
+
             </ComboBox>
             <Button Content="{materialDesign:PackIcon Magnify}"
-                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}"
+                    Style="{StaticResource MaterialDesignFloatingActionMiniSecondaryLightButton}" Click="Button_Click"
                     />
 
 
@@ -67,7 +67,7 @@
                           ItemsSource="{Binding Items1}"
                           CanUserAddRows="False"
                           AutoGenerateColumns="False"
-                          HeadersVisibility="All">
+                          HeadersVisibility="All" SelectionChanged="classgride_SelectionChanged">
 
                     <DataGrid.Columns>
 

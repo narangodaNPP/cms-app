@@ -25,7 +25,8 @@ namespace cms_app.Views
         public create_class()
         {
             InitializeComponent();
-            
+            load();
+
         }
         public void add()
         {
@@ -59,11 +60,23 @@ namespace cms_app.Views
 
 
         }
+        public void load()
+        {
+
+            DatabaseRepository repository = new DatabaseRepository();
+
+            var cartList = repository.classes_set.Where(a => a.teacherID == Global.userid).ToList();
+            classgride.ItemsSource = cartList;
+
+
+        }
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
         {
             add();
-            
+            load();
+
+
 
         }
 

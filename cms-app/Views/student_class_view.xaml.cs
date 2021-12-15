@@ -42,5 +42,10 @@ namespace cms_app.Views
         {
             load();
         }
+
+        private void classgride_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
