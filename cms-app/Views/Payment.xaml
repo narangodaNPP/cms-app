@@ -92,12 +92,12 @@
                         HorizontalAlignment="Center" 
                         Width="160">
 
-                <Button Content="PERSONALDETAILS"
+                <Button Content="PERSONAL DETAILS"
                         x:Name="personButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="12" 
                         Click="personButton_Click"
                 />
                 <Button Content="COURSE DETAILS"
@@ -105,7 +105,7 @@
                         Margin="0 20 0 0"
                        Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="12" 
                         Click="courseButton_Click"
                 />
                 <Button Content="CARD DETAILS"
@@ -113,7 +113,7 @@
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="13" 
+                        FontSize="12" 
                         Click="cardButton_Click"
                 />
 
