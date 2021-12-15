@@ -72,12 +72,9 @@
                                 </DataGridCheckBoxColumn.HeaderStyle>
                             </DataGridCheckBoxColumn>
 
-                            
-                            <materialDesign:DataGridComboBoxColumn
-                                IsEditable="False"
-                                SelectedValueBinding="{Binding Food}"
-                                ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Foods}">
-                            </materialDesign:DataGridComboBoxColumn>
+
+                            <materialDesign:DataGridTextColumn                                            Binding="{Binding classname}"                                            ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                            EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                                                           </materialDesign:DataGridTextColumn>
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>

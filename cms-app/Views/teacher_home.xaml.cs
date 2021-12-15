@@ -39,6 +39,16 @@ namespace cms_app.Views
                 //txtfirstname.Text = user.firstName;
 
             }
+            void load()
+            {
+
+                DatabaseRepository repository = new DatabaseRepository();
+
+                var cartList = repository.classes_set.ToList();
+                classgride.ItemsSource = cartList;
+
+
+            }
         }
     }
 }

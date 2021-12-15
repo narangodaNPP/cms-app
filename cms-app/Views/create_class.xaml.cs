@@ -53,11 +53,18 @@ namespace cms_app.Views
             repository.SaveChanges();
 
             MessageBox.Show("Successfully create class");
+            
+
+
         }
 
         private void nextButton_Click(object sender, RoutedEventArgs e)
         {
             add();
+            
+
         }
+
+       
     }
 }
