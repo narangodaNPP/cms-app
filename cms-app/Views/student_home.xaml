@@ -37,151 +37,151 @@
                        FontSize="20"/>
 
             <StackPanel Orientation="Vertical">
+                <ScrollViewer VerticalScrollBarVisibility="Auto">
+                    <DataGrid
+                        x:Name="classgride"    
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="10 0 10 0"
+                        FontFamily="Comic Sans MS"
+                        HorizontalAlignment="Stretch"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Items1}"
+                        CanUserAddRows="False"
+                        AutoGenerateColumns="False"
+                        HeadersVisibility="All">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn
+                                Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"
+                                ElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnStyle}"
+                                EditingElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnEditingStyle}">
+                                <DataGridCheckBoxColumn.Header>
+                                    <Border
+                                        Background="Transparent">
+                                    </Border>
+                                </DataGridCheckBoxColumn.Header>
+                                <DataGridCheckBoxColumn.HeaderStyle>
+                                    <Style
+                                        TargetType="{x:Type DataGridColumnHeader}"
+                                        BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}">
+                                        <Setter
+                                            Property="HorizontalContentAlignment"
+                                            Value="Center" />
+                                    </Style>
+                                </DataGridCheckBoxColumn.HeaderStyle>
+                            </DataGridCheckBoxColumn>
+
+
+                            <materialDesign:DataGridComboBoxColumn
+                                IsEditable="False"
+                                SelectedValueBinding="{Binding Food}"
+                                ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Foods}">
+                            </materialDesign:DataGridComboBoxColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </ScrollViewer>
+            </StackPanel>
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1"
+                        Grid.Column="1"
+                        Grid.RowSpan="2">
+                <TextBlock Text="My Profile"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"    
+                           FontFamily="Comic Sans MS"
+                           FontSize="20"/>
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <materialDesign:Card Margin="10">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition
-                                Height="Auto" />
+                                    Height="Auto" />
                             <RowDefinition
-                                Height="Auto" />
+                                    Height="Auto" />
                             <RowDefinition
-                                Height="Auto" />
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
                         </Grid.RowDefinitions>
                         <TextBlock
-                            Grid.Row="0"
-                            Margin="16 16 16 4"
-                            FontSize="20"
-                            FontFamily="Comic Sans MS"
-                            Style="{StaticResource MaterialDesignHeadline5TextBlock}"
-                            Text="Class Name" RenderTransformOrigin="0.498,0.483" />
+                                Grid.Row="0"
+                                Margin="16 16 16 4"
+                                FontSize="20"
+                                FontFamily="Comic Sans MS"
+                                Style="{StaticResource MaterialDesignHeadline5TextBlock}"
+                                Text="User Name" 
+                                HorizontalAlignment="Center"/>
+
                         <Separator
-                            Grid.Row="1"
-                            Style="{StaticResource MaterialDesignLightSeparator}" />
-                        
+                                Grid.Row="1"
+                                Style="{StaticResource MaterialDesignLightSeparator}" />
                         <TextBlock
-                            Grid.Row="2"
-                            Margin="16 0 16 8"
-                            FontSize="20"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Left"
-                            Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="Teacher Name" />
+                                Grid.Row="2"
+                                Margin="16 0 16 8"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignBody2TextBlock}"
+                                Text="E-mail" />
                         <StackPanel
-                            Grid.Row="2"
-                            Orientation="Horizontal"
-                            Margin="16 0 16 8"
-                            HorizontalAlignment="Right">
+                                Grid.Row="2"
+                                Orientation="Horizontal"
+                                Margin="16 0 16 8"
+                                HorizontalAlignment="Right">
                             <Button
-                                Content="Pay" 
-                                Width="94"/>
+                                    Content="Change" 
+                                    Width="94"/>
+                        </StackPanel>
+                        <Separator
+                                Grid.Row="3"
+                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                        <TextBlock
+                                Grid.Row="4"
+                                Margin="16 0 16 8"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignBody2TextBlock}"
+                                Text="Contact No:" />
+                        <StackPanel
+                                Grid.Row="4"
+                                Orientation="Horizontal"
+                                Margin="16 0 16 8"
+                                HorizontalAlignment="Right">
+                            <Button
+                                    Content="Change" 
+                                    Width="94"/>
+                        </StackPanel>
+                        <Separator
+                                Grid.Row="5"
+                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                        <TextBlock
+                                Grid.Row="6"
+                                Margin="16 0 16 8"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Left"
+                                Style="{StaticResource MaterialDesignBody2TextBlock}"
+                                Text="Password"/>
+                        <StackPanel
+                                Grid.Row="6"
+                                Orientation="Horizontal"
+                                Margin="16 0 16 8"
+                                HorizontalAlignment="Right">
+                            <Button
+                                    Content="Change" 
+                                    Width="94"/>
                         </StackPanel>
                     </Grid>
                 </materialDesign:Card>
-            </StackPanel>
-
-            
-
-
-        </StackPanel>
-        <StackPanel Grid.Row="1"
-                        Grid.Column="1">
-            <TextBlock Text="My Profile"
-                       HorizontalAlignment="Center"
-                       VerticalAlignment="Center"    
-                       FontFamily="Comic Sans MS"
-                       FontSize="20"/>
-            <materialDesign:Card Margin="10"
-                                ScrollViewer.CanContentScroll="True"
-                                ScrollViewer.VerticalScrollBarVisibility="Visible"
-                                ScrollViewer.HorizontalScrollBarVisibility="Visible">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                        <RowDefinition
-                                Height="Auto" />
-                    </Grid.RowDefinitions>
-                    <TextBlock
-                            Grid.Row="0"
-                            Margin="16 16 16 4"
-                            FontSize="20"
-                            FontFamily="Comic Sans MS"
-                            Style="{StaticResource MaterialDesignHeadline5TextBlock}"
-                            Text="User Name" 
-                            HorizontalAlignment="Center"/>
-                    
-                    <Separator
-                            Grid.Row="1"
-                            Style="{StaticResource MaterialDesignLightSeparator}" />
-                    <TextBlock
-                            Grid.Row="2"
-                            Margin="16 0 16 8"
-                            FontSize="20"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Left"
-                            Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="E-mail" />
-                    <StackPanel
-                            Grid.Row="2"
-                            Orientation="Horizontal"
-                            Margin="16 0 16 8"
-                            HorizontalAlignment="Right">
-                        <Button
-                                Content="Change" 
-                                Width="94"/>
-                    </StackPanel>
-                    <Separator
-                            Grid.Row="3"
-                            Style="{StaticResource MaterialDesignLightSeparator}" />
-                    <TextBlock
-                            Grid.Row="4"
-                            Margin="16 0 16 8"
-                            FontSize="20"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Left"
-                            Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="Contact No:" />
-                    <StackPanel
-                            Grid.Row="4"
-                            Orientation="Horizontal"
-                            Margin="16 0 16 8"
-                            HorizontalAlignment="Right">
-                        <Button
-                                Content="Change" 
-                                Width="94"/>
-                    </StackPanel>
-                    <Separator
-                            Grid.Row="5"
-                            Style="{StaticResource MaterialDesignLightSeparator}" />
-                    <TextBlock
-                            Grid.Row="6"
-                            Margin="16 0 16 8"
-                            FontSize="20"
-                            VerticalAlignment="Center"
-                            HorizontalAlignment="Left"
-                            Style="{StaticResource MaterialDesignBody2TextBlock}"
-                            Text="Password"/>
-                    <StackPanel
-                            Grid.Row="6"
-                            Orientation="Horizontal"
-                            Margin="16 0 16 8"
-                            HorizontalAlignment="Right">
-                        <Button
-                                Content="Change" 
-                                Width="94"/>
-                    </StackPanel>
-                </Grid>
-            </materialDesign:Card>
+            </ScrollViewer>
 
 
         </StackPanel>
