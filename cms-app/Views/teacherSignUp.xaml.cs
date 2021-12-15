@@ -38,7 +38,7 @@ namespace cms_app.Views
             contactNo = Convert.ToInt32(txtcontactno.Text),
             password = password.Password,
             dateofbirth = dateofbirth.SelectedDate.Value,
-            subject = txtsubject.Text,
+            
         };
         repository.teachers.Add(Teacher);
         repository.SaveChanges();

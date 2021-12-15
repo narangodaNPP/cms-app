@@ -53,10 +53,11 @@
                             FontSize="20"
                             FontFamily="Comic Sans MS"
                             Style="{StaticResource MaterialDesignHeadline5TextBlock}"
-                            Text="Class Name" />
+                            Text="Class Name" RenderTransformOrigin="0.498,0.483" />
                         <Separator
                             Grid.Row="1"
                             Style="{StaticResource MaterialDesignLightSeparator}" />
+                        
                         <TextBlock
                             Grid.Row="2"
                             Margin="16 0 16 8"

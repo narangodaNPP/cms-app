@@ -141,19 +141,18 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
-                
-                <TextBox
-                    x:Name="txtsubject"
-                    Style="{StaticResource MaterialDesignFilledTextBox}"
-                    AcceptsReturn="True"
-                    FontSize="16"
-                    TextWrapping="Wrap"
-                    MaxWidth="400"
-                    FontFamily="Comic Sans MS"
-                    materialDesign:HintAssist.Hint="Subject"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="5"
-                 />
+
+                <ComboBox x:Name="Province" SelectedIndex="0" FontWeight="Bold" Height="23" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12" SelectionChanged="Province_SelectionChanged">
+                    <ComboBox.ItemsSource>
+                        <CompositeCollection>
+                            <ComboBoxItem Visibility="Visible" Content="--Select your Subject--"/>
+                            <ComboBoxItem Content="Mathamatics"/>
+                            <ComboBoxItem Content="Chemistry"/>
+                            <ComboBoxItem Content="Bioscince"/>
+                            <ComboBoxItem Content="IT"/>
+                        </CompositeCollection>
+                    </ComboBox.ItemsSource>
+                </ComboBox>
                 <PasswordBox 
                     x:Name="password"
                     Style="{StaticResource MaterialDesignFilledPasswordBox}"
