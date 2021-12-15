@@ -52,36 +52,11 @@
                         AutoGenerateColumns="False"
                         HeadersVisibility="All">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn
-                                Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"
-                                ElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnStyle}"
-                                EditingElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnEditingStyle}">
-                                <DataGridCheckBoxColumn.Header>
-                                    <Border
-                                        Background="Transparent">
-                                    </Border>
-                                </DataGridCheckBoxColumn.Header>
-                                <DataGridCheckBoxColumn.HeaderStyle>
-                                    <Style
-                                        TargetType="{x:Type DataGridColumnHeader}"
-                                        BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}">
-                                        <Setter
-                                            Property="HorizontalContentAlignment"
-                                            Value="Center" />
-                                    </Style>
-                                </DataGridCheckBoxColumn.HeaderStyle>
-                            </DataGridCheckBoxColumn>
-
-
-                            <materialDesign:DataGridTextColumn                                            Binding="{Binding classname}"                                            ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                            EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                                                           </materialDesign:DataGridTextColumn>
-
+                            <materialDesign:DataGridTextColumn                                            Binding="{Binding classname}"                                            ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                            EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                            </materialDesign:DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>
             </StackPanel>
-
-
-
 
         </StackPanel>
         <StackPanel Grid.Row="1"
