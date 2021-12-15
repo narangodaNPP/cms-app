@@ -24,19 +24,23 @@ namespace cms_app.Views
         public student_class_view()
         {
             InitializeComponent();
-             load();
+             
         }
+
         public void load()
         {
 
             DatabaseRepository repository = new DatabaseRepository();
 
-            var cartList = repository.classes_set.ToList();
+            var cartList = repository.classes_set.Where(a => a.subject == FilledComboBox.Text).ToList();
             classgride.ItemsSource = cartList;
 
 
         }
 
-        
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            load();
+        }
     }
 }
