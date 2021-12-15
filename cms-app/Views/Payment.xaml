@@ -92,14 +92,7 @@
                         HorizontalAlignment="Center" 
                         Width="160">
 
-                <Button Content="PERSONAL DETAILS"
-                        x:Name="personButton"
-                        Margin="0 20 0 0"
-                        Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        FontFamily="Comic Sans MS"
-                        FontSize="12" 
-                        Click="personButton_Click"
-                />
+                
                 <Button Content="COURSE DETAILS"
                         x:Name="courseButton"
                         Margin="0 20 0 0"
