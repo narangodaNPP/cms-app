@@ -109,7 +109,8 @@
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
-                        FontSize="20" Click="homeButton_Click" 
+                        FontSize="20" 
+                        Click="homeButton_Click" 
                 />
                 <Button Content="CLASSES"
                         x:Name="classButton"
@@ -118,14 +119,15 @@
                         Click="classButton_Click"
                         FontFamily="Comic Sans MS"
                         FontSize="20" 
+                        
                 />
                 <Button Content="PAYMENTS"
                         x:Name="payButton"
-                        
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
                         FontSize="20" 
+                        Click="payButton_Click"
                 />
 
             </StackPanel>
