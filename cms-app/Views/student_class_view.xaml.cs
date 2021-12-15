@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,17 @@ namespace cms_app.Views
         public student_class_view()
         {
             InitializeComponent();
+             load();
+        }
+        public void load()
+        {
+
+            DatabaseRepository repository = new DatabaseRepository();
+
+            var cartList = repository.classes_set.ToList();
+            classgride.ItemsSource = cartList;
+
+
         }
     }
 }

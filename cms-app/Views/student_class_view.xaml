@@ -28,7 +28,9 @@
                    FontSize="25"/>
 
 
-        <DataGrid Grid.Row="1"
+        <DataGrid
+                x:Name="classgride"    
+            Grid.Row="1"
                   Grid.Column="0"
                   Margin="10 0 10 0"
                   Grid.ColumnSpan="2"
@@ -72,36 +74,28 @@
                 </DataGridCheckBoxColumn>
 
                 <DataGridTextColumn
-                    Binding="{Binding Code}"
+                    Binding="{Binding subject}"
                     Header="Subject"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                 <!-- if you want to use the pop up style (MaterialDesignDataGridTextColumnPopupEditingStyle), you must use MaterialDataGridTextColumn -->
                 <materialDesign:DataGridTextColumn
+                    Binding="{Binding teacher}"
                     Header="Teacher"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
-                    <materialDesign:DataGridTextColumn.Binding>
-                        <Binding
-                            Path="Name">
-
-                        </Binding>
-                    </materialDesign:DataGridTextColumn.Binding>
+                    
                 </materialDesign:DataGridTextColumn>
                 <!-- set a max length to get an indicator in the editor -->
                 <DataGridTextColumn
+                    Binding="{Binding day}"
                     Header="Day"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}">
-                    <DataGridTextColumn.Binding>
-                        <Binding
-                            Path="Description">
-
-                        </Binding>
-                    </DataGridTextColumn.Binding>
+                    
                 </DataGridTextColumn>
                 <materialDesign:DataGridTextColumn
-                    Binding="{Binding Numeric}"
+                    Binding="{Binding classname}"
                     Header="Class Name"
                     Width="120"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">

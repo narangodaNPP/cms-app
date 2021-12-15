@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace cms_app.Migrations
 {
-    public partial class asd : Migration
+    public partial class sad : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -14,10 +14,9 @@ namespace cms_app.Migrations
                     classID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    teacherid = table.Column<int>(type: "int", nullable: false),
+                    teacher = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     day = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     classname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    duration = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     classfree = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>

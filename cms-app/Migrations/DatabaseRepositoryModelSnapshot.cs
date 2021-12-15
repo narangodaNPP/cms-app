@@ -37,15 +37,13 @@ namespace cms_app.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("duration")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("subject")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("teacherid")
-                        .HasColumnType("int");
+                    b.Property<string>("teacher")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("classID");
 

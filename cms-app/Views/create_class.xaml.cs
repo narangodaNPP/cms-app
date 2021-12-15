@@ -31,6 +31,10 @@ namespace cms_app.Views
         {
             DatabaseRepository repository = new DatabaseRepository();
 
+            var user = repository.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault();
+
+            var teacher = "Hello " + " " + user.firstName + " " + user.lastName;
+
             Allclasses allclasses = new Allclasses()
             {
 
@@ -40,7 +44,7 @@ namespace cms_app.Views
                 day = txtday.Text,
                 classname = txtname.Text,
                 classfree = txtfree.Text,
-                teacherid = Global.userid,
+                teacher = teacher,
 
 
 
