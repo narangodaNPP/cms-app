@@ -141,6 +141,7 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
+                
                 <TextBox
                     x:Name="txtsubject"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
