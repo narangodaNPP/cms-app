@@ -149,7 +149,6 @@
                           FontFamily="Comic Sans MS"
                           FontSize="16"
                           MinWidth="400"
-                          SelectionChanged="cboxSuject_Changed"
                           materialDesign:HintAssist.Hint="--Select your Subject">
                     <ComboBox.ItemsSource>
                         <CompositeCollection>
