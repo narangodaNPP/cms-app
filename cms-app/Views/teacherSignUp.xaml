@@ -142,10 +142,17 @@
                     Margin="5"
                  />
 
-                <ComboBox x:Name="Province" SelectedIndex="0" FontWeight="Bold" Height="23" HorizontalAlignment="Left" BorderThickness="0"  Width="180" FontSize="12" SelectionChanged="Province_SelectionChanged">
+                <ComboBox x:Name="cboxSubject" 
+                          SelectedIndex="0" 
+                          Style="{StaticResource MaterialDesignFilledComboBox}"
+                          HorizontalAlignment="Center" 
+                          FontFamily="Comic Sans MS"
+                          FontSize="16"
+                          MinWidth="400"
+                          SelectionChanged="cboxSuject_Changed"
+                          materialDesign:HintAssist.Hint="--Select your Subject">
                     <ComboBox.ItemsSource>
                         <CompositeCollection>
-                            <ComboBoxItem Visibility="Visible" Content="--Select your Subject--"/>
                             <ComboBoxItem Content="Mathamatics"/>
                             <ComboBoxItem Content="Chemistry"/>
                             <ComboBoxItem Content="Bioscince"/>
@@ -163,8 +170,6 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
                  />
-
-
 
             </StackPanel>
 
@@ -294,11 +299,6 @@
 
         </Grid>
 
-
-
-
-
     </Border>
-
 
 </Window>
