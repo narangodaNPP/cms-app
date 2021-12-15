@@ -11,10 +11,11 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="245*"/>
-            <RowDefinition Height="72*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="9*"/>
+            <RowDefinition Height="0.5*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="13*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,16 +24,16 @@
 
         <TextBlock Text="All Classes"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Left"
                    Grid.ColumnSpan="2"
                    FontFamily="Comic Sans MS"
-                   FontSize="25"/>
+                   FontSize="25" Margin="338,0,0,0"/>
 
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
                     Grid.ColumnSpan="2"
-                    HorizontalAlignment="Center"
-                    Margin="10">
+                    HorizontalAlignment="Left" Margin="270,0,0,12" Grid.RowSpan="2"
+                    >
             <ComboBox
                 x:Name="FilledComboBox"
                
@@ -40,7 +41,7 @@
                 IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
                 materialDesign:HintAssist.Hint="Some item"
                 Width="200"
-                Margin="10 0 10 0">    
+                Margin="10 0 10 0">
                 <ComboBoxItem
                     Content="Item 1" />
                 <ComboBoxItem
@@ -55,8 +56,8 @@
 
         </StackPanel>
 
-        <ScrollViewer Grid.Row="2"
-                      Grid.RowSpan="2"
+        <ScrollViewer Grid.Row="3"
+                      Grid.RowSpan="3"
                       Grid.Column="0"
                       Grid.ColumnSpan="2">
             <StackPanel>
@@ -67,7 +68,7 @@
                           CanUserAddRows="False"
                           AutoGenerateColumns="False"
                           HeadersVisibility="All">
-                    
+
                     <DataGrid.Columns>
 
                         <DataGridCheckBoxColumn
@@ -77,7 +78,7 @@
                             <DataGridCheckBoxColumn.Header>
                                 <Border
                                     Background="Transparent">
-                                   
+
                                 </Border>
                             </DataGridCheckBoxColumn.Header>
                             <DataGridCheckBoxColumn.HeaderStyle>
