@@ -84,6 +84,7 @@
 
 
             <Button Content="SIGN-UP as TEACHER"
+                x:Name="btnTeacherSignup"
                 VerticalAlignment="Center"
                 HorizontalAlignment="Center"
                 FontFamily="Comic Sans MS"
@@ -93,10 +94,12 @@
                 FontWeight="Medium"
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
-                MinWidth="200" Click="Button_Click" 
+                MinWidth="200" Click="btnTeacherSignup_Click" 
+                
                
                 />
             <Button Content="Allready a member, SIGN-IN"
+                x:Name="btnTeacherSignin"
                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                 VerticalAlignment="Bottom"
                 HorizontalAlignment="Left"
@@ -108,7 +111,7 @@
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth ="300"
                 Margin="335,0,0,5"
-                MinWidth="200"
+                MinWidth="200" Click="btnTeacherSignin_Click"
                 />
 
 
@@ -118,6 +121,7 @@
                     x:Name="txtfirstname"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
+                    FontFamily="Comic Sans MS"
                     FontSize="16"
                     MaxWidth="400"
                     TextWrapping="Wrap"
@@ -131,6 +135,7 @@
                     AcceptsReturn="True"
                     FontSize="16"
                     MaxWidth="400"
+                    FontFamily="Comic Sans MS"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="E-mail"
                     materialDesign:TextFieldAssist.HasClearButton="True"
@@ -143,6 +148,7 @@
                     FontSize="16"
                     TextWrapping="Wrap"
                     MaxWidth="400"
+                    FontFamily="Comic Sans MS"
                     materialDesign:HintAssist.Hint="Subject"
                     materialDesign:TextFieldAssist.HasClearButton="True" 
                     Margin="5"
@@ -151,6 +157,7 @@
                     x:Name="password"
                     Style="{StaticResource MaterialDesignFilledPasswordBox}"
                     FontSize="16" 
+                    FontFamily="Comic Sans MS"
                     MaxWidth="400"
                     materialDesign:HintAssist.Hint="Password"
                     materialDesign:TextFieldAssist.HasClearButton="True"
@@ -170,6 +177,7 @@
                     FontSize="16"
                     MaxWidth="400"
                     TextWrapping="Wrap"
+                    FontFamily="Comic Sans MS"
                     materialDesign:HintAssist.Hint="Last Name"
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="5"
@@ -181,6 +189,7 @@
                     AcceptsReturn="True"
                     FontSize="16"
                     MaxWidth="400"
+                    FontFamily="Comic Sans MS"
                     TextWrapping="Wrap"
                     materialDesign:HintAssist.Hint="Contact No:"
                     materialDesign:TextFieldAssist.HasClearButton="True"
@@ -203,6 +212,7 @@
                     FontSize="16"
                     TextWrapping="Wrap"
                     MaxWidth="400"
+                    FontFamily="Comic Sans MS"
                     materialDesign:HintAssist.Hint="Confirm Password"
                     materialDesign:TextFieldAssist.HasClearButton="True" 
                     Margin="5"

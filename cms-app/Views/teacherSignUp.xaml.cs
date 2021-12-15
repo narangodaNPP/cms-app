@@ -27,42 +27,40 @@ namespace cms_app.Views
         }
 
  
-        public void add()
-{
-   DatabaseRepository repository = new DatabaseRepository();
+        public void add(){
+        DatabaseRepository repository = new DatabaseRepository();
 
-   teacher Teacher = new teacher()
-   {
+        teacher Teacher = new teacher()
+        {
+            firstName = txtfirstname.Text,
+            lastName = txtlastname.Text,
+            email = txtemail.Text,
+            contactNo = Convert.ToInt32(txtcontactno.Text),
+            password = password.Password,
+            dateofbirth = dateofbirth.SelectedDate.Value,
+            subject = txtsubject.Text,
+        };
+        repository.teachers.Add(Teacher);
+        repository.SaveChanges();
 
+        MessageBox.Show("Successfully Registerd!!");
 
-
-       firstName = txtfirstname.Text,
-       lastName = txtlastname.Text,
-       email = txtemail.Text,
-       contactNo = Convert.ToInt32(txtcontactno.Text),
-       password = password.Password,
-       dateofbirth = dateofbirth.SelectedDate.Value,
-       subject = txtsubject.Text,
-
-
-
-
-
-
-   };
-   repository.teachers.Add(Teacher);
-   repository.SaveChanges();
-
-   MessageBox.Show("Successfully Registerd!!");
-
-            teacherSignIn teasigni = new teacherSignIn();
-            teasigni.Show();
-            this.Close();
+        teacherDashboard teasigni = new teacherDashboard();
+        teasigni.Show();
+        this.Close();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+
+        private void btnTeacherSignup_Click(object sender, RoutedEventArgs e)
         {
             add();
+        }
+
+        private void btnTeacherSignin_Click(object sender, RoutedEventArgs e)
+        {
+            teacherSignIn signin = new teacherSignIn();
+            signin.Show();
+            this.Close();
         }
     }
 }

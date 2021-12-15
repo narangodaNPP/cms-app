@@ -27,7 +27,7 @@ namespace cms_app.Views
 
         DatabaseRepository LoginLogCtx = new DatabaseRepository();
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void btnTeacherSignin_Click(object sender, RoutedEventArgs e)
         {
             if (LoginLogCtx.teachers.Where(a => (a.email == txtemail.Text) && (a.password == txtpassword.Password)).FirstOrDefault() != null)
             {
@@ -41,6 +41,13 @@ namespace cms_app.Views
                 this.Close();
 
             }
+        }
+
+        private void btnTeacherSignup_Click(object sender, RoutedEventArgs e)
+        {
+            teacherSignUp signup = new teacherSignUp();
+            signup.Show();
+            this.Close();
         }
     }
 }

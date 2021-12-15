@@ -41,11 +41,9 @@ namespace cms_app.Views
             }
         }
 
-       
-
         private void homeButton_Click(object sender, RoutedEventArgs e)
         {
-            //
+            myStudentDashboardFrame.Content = new student_home();
         }
 
         private void classButton_Click(object sender, RoutedEventArgs e)
@@ -55,7 +53,9 @@ namespace cms_app.Views
 
         private void payButton_Click(object sender, RoutedEventArgs e)
         {
-           
+            Payment payment = new Payment();
+            payment.Show();
+            this.Hide();
         }
     }
 }

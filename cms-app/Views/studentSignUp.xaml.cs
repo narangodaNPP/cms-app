@@ -54,9 +54,18 @@ namespace cms_app.Views
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void signup_Click(object sender, RoutedEventArgs e)
         {
             add();
         }
+
+        private void signin_Click(object sender, RoutedEventArgs e)
+        {
+            teacherSignIn signin = new teacherSignIn();
+            signin.Show();
+            this.Close();
+        }
+
+
     }
 }

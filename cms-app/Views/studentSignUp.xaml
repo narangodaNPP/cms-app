@@ -99,10 +99,11 @@
                 materialDesign:ButtonAssist.CornerRadius="10"
                 MaxWidth="300"
                 MinWidth="200" 
-                Margin="10" Click="Button_Click"
+                Margin="10" Click="signup_Click"
                 />
             <Button Content="Allready a member, SIGN-IN"
                 VerticalAlignment="Bottom"
+                x:Name="btnSignin"
                 Style="{StaticResource MaterialDesignFlatSecondaryLightButton}"
                 HorizontalAlignment="Center"
                 Grid.Row="3"
@@ -114,6 +115,7 @@
                 MaxWidth ="300"
                 Margin="10"
                 MinWidth="200"
+                Click="signin_Click"
                 />
 
 

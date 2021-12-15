@@ -39,9 +39,13 @@ namespace cms_app.Views
                 txtfirstname.Text = user.firstName;
 
             }
-        } 
-       
+        }
 
-        
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+            //course_details coursedetails = new course_details();
+            //coursedetails.Show();
+            //this.close();
+        }
     }
 }
