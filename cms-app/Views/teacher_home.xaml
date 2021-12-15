@@ -52,7 +52,7 @@
                         AutoGenerateColumns="False"
                         HeadersVisibility="All">
                         <DataGrid.Columns>
-                            <materialDesign:DataGridTextColumn                                            Binding="{Binding classname}"                                            ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                            EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                            </materialDesign:DataGridTextColumn>
+                            <materialDesign:DataGridTextColumn                                Binding="{Binding classname}"                                ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                            </materialDesign:DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </ScrollViewer>

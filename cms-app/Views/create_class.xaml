@@ -32,36 +32,37 @@
                       Grid.Column="0">
             <StackPanel Grid.Column="0"
                     Margin="5" 
-                    Grid.Row ="1" 
-                    >
+                    Grid.Row ="1">
                 <TextBox 
-                x:Name="txtname"
-                Style="{StaticResource MaterialDesignFilledTextBox}"
-                AcceptsReturn="True"
-                FontFamily="Comic Sans MS"
-                FontSize="16"
-                MaxWidth="400"
-                TextWrapping="Wrap"
-                materialDesign:HintAssist.Hint="Class name"
-                materialDesign:TextFieldAssist.HasClearButton="True"
-                Margin="10"
-                    
-            />
-                
-                <TextBox 
-                x:Name="txtsubject"
+                    x:Name="txtname"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
-                    FontSize="16"
                     FontFamily="Comic Sans MS"
-                    TextWrapping="Wrap"
+                    FontSize="16"
                     MaxWidth="400"
-                    materialDesign:HintAssist.Hint="Subject"
-                    materialDesign:TextFieldAssist.HasClearButton="True" 
-                    Margin="10"
-                 />
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Class name"
+                    materialDesign:TextFieldAssist.HasClearButton="True"
+                    Margin="10"  
+                />
+                <ComboBox
+                    x:Name="FilledComboBox"
+                    Style="{StaticResource MaterialDesignFilledComboBox}"
+                    IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
+                    materialDesign:HintAssist.Hint="--Select Subject"
+                    FontFamily="Comic Sans MS"
+                    FontSize="16"
+                    MaxWidth="400"
+                    Margin="10">
+                        <ComboBoxItem
+                            Content="Item 1" />
+                        <ComboBoxItem
+                            Content="Item 2" />
+                        <ComboBoxItem
+                            Content="Item 3" />
+                </ComboBox>
                 <TextBox 
-                x:Name="txtday"
+                    x:Name="txtday"
                     Style="{StaticResource MaterialDesignFilledTextBox}"
                     AcceptsReturn="True"
                     FontSize="16"
@@ -73,17 +74,17 @@
                     Margin="10"
                  />
                 <TextBox
-                x:Name="txtfree"
-                Style="{StaticResource MaterialDesignFilledTextBox}"
-                AcceptsReturn="True"
-                FontSize="16"
-                Margin="10"
-                FontFamily="Comic Sans MS"
-                MaxWidth="400"
-                TextWrapping="Wrap"
-                materialDesign:HintAssist.Hint="Class free"
-                materialDesign:TextFieldAssist.HasClearButton="True"     
-            />
+                    x:Name="txtfree"
+                    Style="{StaticResource MaterialDesignFilledTextBox}"
+                    AcceptsReturn="True"
+                    FontSize="16"
+                    Margin="10"
+                    FontFamily="Comic Sans MS"
+                    MaxWidth="400"
+                    TextWrapping="Wrap"
+                    materialDesign:HintAssist.Hint="Class free"
+                    materialDesign:TextFieldAssist.HasClearButton="True"     
+                />
 
             </StackPanel>
         </ScrollViewer>
@@ -102,61 +103,27 @@
                        FontFamily="Comic Sans MS"
                        FontSize="15" />
 
-                <materialDesign:Card 
-                    Background="#eceff1"
-                    Foreground="Black"
-                    Padding="0"
-                    Width="330">
-                   <Grid Width ="330">
-                        <Grid.RowDefinitions>
-                            <RowDefinition
-                                Height="Auto" />
-                            <RowDefinition
-                                Height="Auto" />
-                            <RowDefinition
-                                Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <TextBlock
-                                Grid.Row="0"
-                                Margin="16 16 16 4"
-                                Style="{StaticResource MaterialDesignHeadline6TextBlock}"
-                                Text="Combined Maths 2023 A/L" />
-                                      <Separator
-                                            Grid.Row="1"
-                                            Style="{StaticResource MaterialDesignLightSeparator}" />
-                            <TextBlock
-                                Grid.Row="2"
-                                Margin="16 0 16 8"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Style="{StaticResource MaterialDesignBody2TextBlock}"
-                                Text="Wednesday" />
-                            <StackPanel
-                                Grid.Row="2"
-                                Orientation="Horizontal"
-                                Margin="16 0 16 8"
-                                HorizontalAlignment="Right">
-                        
-                        
-                        </StackPanel>
-                    </Grid>
-                </materialDesign:Card>
-                <!--
-                <TextBox 
-                        Style="{StaticResource MaterialDesignFilledTextBox}"
-                        AcceptsReturn="True"
-                        FontSize="16"
-                    FontFamily="Comic Sans MS"
-                        TextWrapping="Wrap"
-                        MaxWidth="400"
-                        materialDesign:HintAssist.Hint="Contact No:"
-                        materialDesign:TextFieldAssist.HasClearButton="True" 
-                        Margin="10"
-                 
-                -->
-
-
-
+                <StackPanel Orientation="Vertical">
+                    <ScrollViewer VerticalScrollBarVisibility="Auto">
+                        <DataGrid
+                        x:Name="classgride"    
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Margin="10 0 10 0"
+                        FontFamily="Comic Sans MS"
+                        HorizontalAlignment="Stretch"
+                        Grid.ColumnSpan="2"
+                        ItemsSource="{Binding Items1}"
+                        CanUserAddRows="False"
+                        AutoGenerateColumns="False"
+                        HeadersVisibility="All">
+                            <DataGrid.Columns>
+                                <materialDesign:DataGridTextColumn                                Binding="{Binding classname}"                                ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"                                EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">                                </materialDesign:DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </ScrollViewer>
+                </StackPanel>
+                
             </StackPanel>
         </ScrollViewer>
         <Button 
