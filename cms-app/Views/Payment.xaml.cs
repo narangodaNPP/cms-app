@@ -25,47 +25,50 @@ namespace cms_app.Views
         public Payment()
         {
             InitializeComponent();
+            txtsubject.ItemsSource = newAuthors;
 
         }
 
+        string[] newAuthors = {  "Chemistry","Mathamatics", "Bioscince", "IT" };
 
 
         private void txtsubject_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             DatabaseRepository reposi = new DatabaseRepository();
+         List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text).ToList();
 
-            List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text).ToList();
+              Trace.WriteLine(txtsubject.Text);
 
-            Trace.WriteLine("hbshkvb " + teachers.Count());
-            List<string> ateacher = new List<string>();
+              Trace.WriteLine("hbshkvb " + teachers.Count());
+              List<string> ateacher = new List<string>();
 
-            foreach (Allclasses teacher in teachers) {
+              foreach (Allclasses teacher in teachers) {
 
-                ateacher.Add(teacher.teacher);
-                //txtteacher.Items.Add(teacher.teacher);
-                Trace.WriteLine(teacher.teacher);
-            }
-            txtteacher.ItemsSource = ateacher;
+                  ateacher.Add(teacher.teacher);
+                  //txtteacher.Items.Add(teacher.teacher);
+                  Trace.WriteLine(teacher.teacher);
+              }
+              txtteacher.ItemsSource = ateacher; 
         }
 
         private void txtteacher_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             //Trace.WriteLine(txtteacher.Text + "fgsdfhs");
             DatabaseRepository reposi = new DatabaseRepository();
+        List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text).ToList();
 
-            List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text).ToList();
+                        Trace.WriteLine("hbshkvb" + teachers.Count());
+                        List<string> ateacher = new List<string>();
 
-            Trace.WriteLine("hbshkvb" + teachers.Count());
-            List<string> ateacher = new List<string>();
+                        foreach (Allclasses teacher in teachers)
+                        {
 
-            foreach (Allclasses teacher in teachers)
-            {
+                            ateacher.Add(teacher.teacher);
 
-                ateacher.Add(teacher.teacher);
-                //txtteacher.Items.Add(teacher.teacher);
-                Trace.WriteLine(teacher.teacher);
-            }
-            txtclass.ItemsSource = ateacher;
+                            Trace.WriteLine(teacher.teacher);
+                        }
+                        txtclass.ItemsSource = ateacher;
         }
 
 

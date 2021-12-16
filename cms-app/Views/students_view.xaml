@@ -106,36 +106,29 @@
                         </DataGridCheckBoxColumn>
 
                         <DataGridTextColumn
-                    Binding="{Binding Code}"
+                    Binding="{Binding firstName}"
                     Header="First Name"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}" />
                         <!-- if you want to use the pop up style (MaterialDesignDataGridTextColumnPopupEditingStyle), you must use MaterialDataGridTextColumn -->
                         <materialDesign:DataGridTextColumn
+                            Binding="{Binding lastName}"
                     Header="Last Name"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
-                            <materialDesign:DataGridTextColumn.Binding>
-                                <Binding
-                            Path="Name">
-
-                                </Binding>
-                            </materialDesign:DataGridTextColumn.Binding>
+                        
+                       
                         </materialDesign:DataGridTextColumn>
                         <!-- set a max length to get an indicator in the editor -->
                         <DataGridTextColumn
+                            Binding="{Binding email}"
                     Header="E-mail"
                     ElementStyle="{StaticResource MaterialDesignDataGridTextColumnStyle}"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnEditingStyle}">
-                            <DataGridTextColumn.Binding>
-                                <Binding
-                            Path="Description">
-
-                                </Binding>
-                            </DataGridTextColumn.Binding>
+                            
                         </DataGridTextColumn>
                         <materialDesign:DataGridTextColumn
-                    Binding="{Binding Numeric}"
+                    Binding="{Binding contactNo}"
                     Header="Contact No:"
                     Width="120"
                     EditingElementStyle="{StaticResource MaterialDesignDataGridTextColumnPopupEditingStyle}">
@@ -170,12 +163,12 @@
                             </DataGridTextColumn.ElementStyle>
                         </materialDesign:DataGridTextColumn>
                         <!-- use custom combo box column to get better combos. Use ItemsSourceBinding as your binding template to be applied to each combo -->
-                        <materialDesign:DataGridComboBoxColumn
+                        <materialDesign:DataGridTextColumn
+                          Binding="{Binding contactNo}"  
                     Header="Birth Date"
-                    IsEditable="True"
+                    
                     Width="100"
-                    SelectedValueBinding="{Binding Food}"
-                    ItemsSourceBinding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type DataGrid}}, Path=DataContext.Foods}">
+                    >
                             <!--Setting the editing element style allows access to all of the combo box's properties
                       <materialDesign:MaterialDataGridComboBoxColumn.EditingElementStyle>
                           <Style TargetType="ComboBox" BasedOn="{StaticResource {ComponentResourceKey TypeInTargetAssembly={x:Type ComboBox}, ResourceId=MaterialDataGridComboBoxColumnEditingStyle}}" >
@@ -183,7 +176,7 @@
                           </Style>
                       </materialDesign:MaterialDataGridComboBoxColumn.EditingElementStyle>
                       -->
-                        </materialDesign:DataGridComboBoxColumn>
+                        </materialDesign:DataGridTextColumn>
                     </DataGrid.Columns>
                 </DataGrid>
             </StackPanel>

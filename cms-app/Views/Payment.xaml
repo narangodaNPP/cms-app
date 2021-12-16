@@ -159,6 +159,7 @@
                     Grid.Row ="2" Grid.ColumnSpan="2"
                     >
                 <ComboBox
+                    SelectedIndex="0" 
                     x:Name="txtsubject"
                     SelectionChanged="txtsubject_SelectionChanged"
                     Style="{StaticResource MaterialDesignFilledComboBox}"
@@ -169,11 +170,14 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                 >
-                    <ComboBoxItem Content="Mathamatics"/>
-                    <ComboBoxItem Content="Chemistry"/>
-                    <ComboBoxItem Content="Bioscince"/>
-                    <ComboBoxItem Content="IT"/>
+                   
                 </ComboBox>
+                
+                
+                
+                
+                
+
                 <ComboBox
                     x:Name="txtteacher"
                     SelectionChanged="txtteacher_SelectionChanged"
