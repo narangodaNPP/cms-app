@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,47 @@ namespace cms_app.Views
         public student_home()
         {
             InitializeComponent();
+            retrew();
+
+        }
+
+        public void retrew()
+        {
+
+            DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+            if (LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault() != null)
+            {
+
+
+                var user = LoginLogCtx.Students.Where(a => a.studentID == Global.userid).FirstOrDefault();
+
+                txtemail.Text = user.email;
+                txtcontacno.Text = user.contactNo;
+                password.Text = user.password;
+
+
+
+            }
+        }
+        public void add()
+        {
+            DatabaseRepository repository = new DatabaseRepository();
+
+            Student student = new Student()
+            {
+
+
+                email = txtemail.Text,
+                contactNo = txtcontacno.Text,
+                password = password.Text,
+
+
+            };
+        }
+            private void btnSave_Click(object sender, RoutedEventArgs e)
+        {
+            add();
         }
     }
 }

@@ -75,6 +75,10 @@
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <materialDesign:Card Margin="10">
                     <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="87*"/>
+                            <ColumnDefinition Width="103*"/>
+                        </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition
                                     Height="Auto" />
@@ -97,24 +101,25 @@
                         </Grid.RowDefinitions>
                         <Label
                                 Grid.Row="0"
-                                Margin="16 16 16 4"
+                                Margin="134,16,0,4"
                                 FontSize="20"
                                 FontFamily="Comic Sans MS"
                                 VerticalContentAlignment="Center"
                                 Content="User Name" 
-                                HorizontalAlignment="Center"/>
+                                HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
 
                         <Separator
                                 Grid.Row="1"
-                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                                Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <TextBox
+                                x:Name="txtemail"
                                 Grid.Row="2"
-                                Margin="16 0 16 8"
+                                Margin="160,0,0,0"
                                 FontSize="20"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
-                                Text="E-mail" />
+                                Text="E-mail" Grid.ColumnSpan="2" />
                         <!--
                         <StackPanel
                                 Grid.Row="2"
@@ -130,15 +135,16 @@
                         -->
                         <Separator
                                 Grid.Row="3"
-                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                                Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <TextBox
+                               x:Name="txtcontacno"
                                 Grid.Row="4"
-                                Margin="16 0 16 8"
+                                Margin="134,0,0,0"
                                 FontSize="20"
-                                VerticalAlignment="Center"
+                                VerticalAlignment="Top"
                                 FontFamily="Comic Sans MS"
-                                HorizontalAlignment="Center"
-                                Text="Contact No:" />
+                                HorizontalAlignment="Left"
+                                Text="Contact No:" Grid.ColumnSpan="2" />
                         <!--
                         <StackPanel
                                 Grid.Row="4"
@@ -154,15 +160,16 @@
                         -->
                         <Separator
                                 Grid.Row="5"
-                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                                Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <TextBox
+                             x:Name="password"
                                 Grid.Row="6"
-                                Margin="16 0 16 8"
+                                Margin="146,0,0,0"
                                 FontSize="20"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
-                                Text="Password"
+                                Text="Password" Grid.ColumnSpan="2"
                                 />
                         <!--
                         <StackPanel
@@ -180,16 +187,16 @@
                         -->
                         <Separator
                                 Grid.Row="7"
-                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                                Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <Button
-                                Grid.Row="8"
-                                Margin="16 0 16 8"
+                                Grid.Row="7"
+                                Margin="152,20,0,0"
                                 FontSize="20"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top"
+                                HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
                                 Content="Save"
-                                x:Name="btnSave"
+                                x:Name="btnSave" Click="btnSave_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"
                                 />
                     </Grid>
                 </materialDesign:Card>

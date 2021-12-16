@@ -88,4 +88,9 @@ namespace cms_app.Views
 
             
         }
+
+        private void btnPay_Click(object sender, RoutedEventArgs e)
+        {
+            add();
+        }
     } }

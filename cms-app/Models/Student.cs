@@ -21,7 +21,7 @@ namespace cms_app.Models
         public string email { get; set; }
 
         [Required]
-        public int contactNo { get; set; }
+        public string contactNo { get; set; }
 
         [Required]
         public string password { get; set; }

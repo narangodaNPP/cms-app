@@ -37,7 +37,7 @@ namespace cms_app.Views
                 firstName = txtfirstname.Text,
                 lastName  = txtlastname.Text,
                 email     = txtemail.Text,
-                contactNo = Convert.ToInt32(txtcontactno.Text),
+                contactNo = txtcontactno.Text,
                 password  = txtpassword.Password,
                 dateofbirth = txtdateofbirth.SelectedDate.Value,
                              
