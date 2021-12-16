@@ -126,7 +126,7 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </materialDesign:DataGridTextColumn>
-                        <!-- use custom combo box column to get better combos. Use ItemsSourceBinding as your binding template to be applied to each combo -->
+                        
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
