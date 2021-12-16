@@ -74,7 +74,7 @@
 
 
             </Border>
-            
+
             <materialDesign:Chip
                 x:Name="txtname"
                 Grid.Row="1"
@@ -82,16 +82,8 @@
                 FontFamily="Comic Sans MS"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Center"
-                
-                FontSize="18"
+                FontSize="16"
                 Margin="20 0 40 0">
-                <!--if there is profile picture
-                <materialDesign:Chip.Icon>
-                   
-                    <Image Source="#" />
-                    
-                </materialDesign:Chip.Icon>
-                -->
             </materialDesign:Chip>  
 
             <Frame Grid.Row="2"
