@@ -116,6 +116,7 @@
                         FontFamily="Comic Sans MS"
                         FontSize="17" Click="createClassButton_Click" 
                 />
+                <!--
                 <Button Content="PAYMENTS"
                         x:Name="paymentButton"
                         Margin="0 20 0 0"
@@ -123,6 +124,8 @@
                         FontFamily="Comic Sans MS"
                         FontSize="17" Click="paymentButton_Click" 
                 />
+                -->
+                
                 <Button Content="STUDENTS"
                         x:Name="studentButton"
                         Margin="0 20 0 0"

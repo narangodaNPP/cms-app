@@ -12,9 +12,9 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50*"/>
-            <RowDefinition Height="245*"/>
-            <RowDefinition Height="72*"/>
+            <RowDefinition Height="61*"/>
+            <RowDefinition Height="329*"/>
+            <RowDefinition Height="60*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -23,10 +23,10 @@
 
         <TextBlock Text="Home"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Left"
                    Grid.ColumnSpan="2"
                    FontFamily="Comic Sans MS"
-                   FontSize="25"/>
+                   FontSize="25" Height="35" Margin="367,0,0,0" Width="66"/>
 
         <StackPanel Orientation="Vertical"
                     Grid.Row="1"
@@ -194,12 +194,13 @@
                                 Grid.Row="7"
                                 Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <Button
-                                Grid.Row="7"
+                                Grid.Row="8"
                                 FontSize="20"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Center"
                                 FontFamily="Comic Sans MS"
                                 Content="Save"
+                                Margin="5"
                                 x:Name="btnSave" 
                                 Click="btnSave_Click" 
                                 Grid.ColumnSpan="2" 

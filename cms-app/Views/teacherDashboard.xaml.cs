@@ -45,10 +45,10 @@ namespace cms_app.Views
             myDashboardFrame.Content = new create_class();
         }
 
-        private void paymentButton_Click(object sender, RoutedEventArgs e)
-        {
-            myDashboardFrame.Content = new payments_view();
-        }
+        //private void paymentButton_Click(object sender, RoutedEventArgs e)
+        //{
+           // myDashboardFrame.Content = new payments_view();
+       // }
 
         private void studentButton_Click(object sender, RoutedEventArgs e)
         {
