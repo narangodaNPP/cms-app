@@ -1,4 +1,5 @@
 ﻿using cms_app.Database;
+using cms_app.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +26,33 @@ namespace cms_app.Views
         {
             InitializeComponent();
             load();
+            retrew();
+        }
+        //public void retrew()
+        //{
+
+        //    DatabaseRepository LoginLogCtx = new DatabaseRepository();
+
+        //    if (LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault() != null)
+        //    {
+
+
+        //        var user = LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault();
+
+        //        //txtfirstname.Text = user.firstName;
+
+        //    }
+            
+        //}
+        public void load()
+        {
+
+            DatabaseRepository repository = new DatabaseRepository();
+
+            var cartList = repository.classes_set.Where(a => a.teacherID == Global.userid).ToList();
+            classgride.ItemsSource = cartList;
+
+
         }
         public void retrew()
         {
@@ -37,20 +65,36 @@ namespace cms_app.Views
 
                 var user = LoginLogCtx.teachers.Where(a => a.teacherID == Global.userid).FirstOrDefault();
 
-                //txtfirstname.Text = user.firstName;
+                txtemail.Text = user.email;
+                txtcontacno.Text = user.contactNo;
+                password.Text = user.password;
+                name.Content = user.firstName + " " + user.lastName;
+
+
 
             }
-            
         }
-        public void load()
+        public void add()
         {
-
             DatabaseRepository repository = new DatabaseRepository();
 
-            var cartList = repository.classes_set.Where(a => a.teacherID == Global.userid).ToList();
-            classgride.ItemsSource = cartList;
+            teacher Teacher = new teacher()
+            {
 
 
+                email = txtemail.Text,
+                contactNo = txtcontacno.Text,
+                password = password.Text,
+
+
+            };
+        }
+        
+
+        private void btnSave_Click_1(object sender, RoutedEventArgs e)
+        {
+            add();
         }
     }
 }
+

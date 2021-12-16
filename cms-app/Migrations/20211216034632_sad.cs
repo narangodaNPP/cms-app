@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace cms_app.Migrations
 {
-    public partial class asw : Migration
+    public partial class sad : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -87,7 +87,7 @@ namespace cms_app.Migrations
                     firstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    contactNo = table.Column<int>(type: "int", nullable: false),
+                    contactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     dateofbirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     subject = table.Column<string>(type: "nvarchar(max)", nullable: true),

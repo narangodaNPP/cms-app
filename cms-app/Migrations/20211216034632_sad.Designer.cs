@@ -10,8 +10,8 @@ using cms_app.Database;
 namespace cms_app.Migrations
 {
     [DbContext(typeof(DatabaseRepository))]
-    [Migration("20211216032025_asw")]
-    partial class asw
+    [Migration("20211216034632_sad")]
+    partial class sad
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -150,8 +150,9 @@ namespace cms_app.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("contactNo")
-                        .HasColumnType("int");
+                    b.Property<string>("contactNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("dateofbirth")
                         .HasColumnType("datetime2");
