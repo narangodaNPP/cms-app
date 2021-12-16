@@ -73,24 +73,29 @@ namespace cms_app.Views
         {
             DatabaseRepository repository = new DatabaseRepository();
 
-            var teachers = repository.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text && a.classname == txtclass.Text).FirstOrDefault();
-
-            var id = teachers.classID;
-
-            studentclass studentclasses = new studentclass()
+            if (repository.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text && a.classname == txtclass.Text).FirstOrDefault() != null)
             {
-                classID = id,
-                studentID = Global.userid
+                var teachers = repository.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text && a.classname == txtclass.Text).FirstOrDefault();
+
+                var id = teachers.classID;
+
+                studentclass studentclasses = new studentclass()
+                {
+                    classID = id,
+                    studentID = Global.userid
 
 
-            };
+                };
 
-
+            }
             
         }
 
         private void btnPay_Click(object sender, RoutedEventArgs e)
         {
             add();
+            studentDashboard studDashboard = new studentDashboard();
+            studDashboard.Show();
+            this.Close();
         }
     } }

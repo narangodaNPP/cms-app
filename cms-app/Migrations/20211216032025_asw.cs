@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace cms_app.Migrations
 {
-    public partial class sad : Migration
+    public partial class asw : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -13,10 +13,11 @@ namespace cms_app.Migrations
                 {
                     classID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    subject = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    teacher = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    day = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    classname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    subject = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    teacher = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    teacherID = table.Column<int>(type: "int", nullable: false),
+                    day = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    classname = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     classfree = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
@@ -45,6 +46,20 @@ namespace cms_app.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "studentclasses",
+                columns: table => new
+                {
+                    clID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    studentID = table.Column<int>(type: "int", nullable: false),
+                    classID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_studentclasses", x => x.clID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Students",
                 columns: table => new
                 {
@@ -53,7 +68,7 @@ namespace cms_app.Migrations
                     firstName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     lastName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     email = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    contactNo = table.Column<int>(type: "int", nullable: false),
+                    contactNo = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     password = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     dateofbirth = table.Column<DateTime>(type: "datetime2", nullable: false),
                     myclasses = table.Column<string>(type: "nvarchar(max)", nullable: true)
@@ -91,6 +106,9 @@ namespace cms_app.Migrations
 
             migrationBuilder.DropTable(
                 name: "Payments");
+
+            migrationBuilder.DropTable(
+                name: "studentclasses");
 
             migrationBuilder.DropTable(
                 name: "Students");

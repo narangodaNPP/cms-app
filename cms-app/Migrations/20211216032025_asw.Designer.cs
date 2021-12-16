@@ -10,8 +10,8 @@ using cms_app.Database;
 namespace cms_app.Migrations
 {
     [DbContext(typeof(DatabaseRepository))]
-    [Migration("20211215125538_sad")]
-    partial class sad
+    [Migration("20211216032025_asw")]
+    partial class asw
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -32,20 +32,19 @@ namespace cms_app.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("classname")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("day")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("subject")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("teacher")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("teacherID")
+                        .HasColumnType("int");
 
                     b.HasKey("classID");
 
@@ -95,8 +94,9 @@ namespace cms_app.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("contactNo")
-                        .HasColumnType("int");
+                    b.Property<string>("contactNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("dateofbirth")
                         .HasColumnType("datetime2");
@@ -123,6 +123,24 @@ namespace cms_app.Migrations
                     b.HasKey("studentID");
 
                     b.ToTable("Students");
+                });
+
+            modelBuilder.Entity("cms_app.Models.studentclass", b =>
+                {
+                    b.Property<int>("clID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int>("classID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("studentID")
+                        .HasColumnType("int");
+
+                    b.HasKey("clID");
+
+                    b.ToTable("studentclasses");
                 });
 
             modelBuilder.Entity("cms_app.Models.teacher", b =>
