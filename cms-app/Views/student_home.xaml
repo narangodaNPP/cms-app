@@ -4,7 +4,8 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:cms_app.Views"
-      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="cms_app.Views.student_home"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      x:Class="cms_app.Views.student_home"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="student_home">
@@ -31,6 +32,7 @@
                     Grid.Row="1"
                     Grid.Column="0">
             <TextBlock Text="My Courses"
+                       Margin="10"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"    
                        FontFamily="Comic Sans MS"
@@ -51,27 +53,6 @@
                         AutoGenerateColumns="False"
                         HeadersVisibility="All">
                         <DataGrid.Columns>
-                            <DataGridCheckBoxColumn
-                                Binding="{Binding IsSelected, UpdateSourceTrigger=PropertyChanged}"
-                                ElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnStyle}"
-                                EditingElementStyle="{StaticResource MaterialDesignDataGridCheckBoxColumnEditingStyle}">
-                                <DataGridCheckBoxColumn.Header>
-                                    <Border
-                                        Background="Transparent">
-                                    </Border>
-                                </DataGridCheckBoxColumn.Header>
-                                <DataGridCheckBoxColumn.HeaderStyle>
-                                    <Style
-                                        TargetType="{x:Type DataGridColumnHeader}"
-                                        BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}">
-                                        <Setter
-                                            Property="HorizontalContentAlignment"
-                                            Value="Center" />
-                                    </Style>
-                                </DataGridCheckBoxColumn.HeaderStyle>
-                            </DataGridCheckBoxColumn>
-
-
                             <materialDesign:DataGridComboBoxColumn
                                 IsEditable="False"
                                 SelectedValueBinding="{Binding Food}"
@@ -82,11 +63,11 @@
                 </ScrollViewer>
             </StackPanel>
         </StackPanel>
-        
+
         <StackPanel Grid.Row="1"
                         Grid.Column="1"
                         Grid.RowSpan="2">
-                <TextBlock Text="My Profile"
+            <TextBlock Text="My Profile"
                            HorizontalAlignment="Center"
                            VerticalAlignment="Center"    
                            FontFamily="Comic Sans MS"
@@ -109,84 +90,110 @@
                                     Height="Auto" />
                             <RowDefinition
                                     Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock
+                        <Label
                                 Grid.Row="0"
                                 Margin="16 16 16 4"
                                 FontSize="20"
                                 FontFamily="Comic Sans MS"
-                                Style="{StaticResource MaterialDesignHeadline5TextBlock}"
-                                Text="User Name" 
+                                VerticalContentAlignment="Center"
+                                Content="User Name" 
                                 HorizontalAlignment="Center"/>
 
                         <Separator
                                 Grid.Row="1"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
-                        <TextBlock
+                        <TextBox
                                 Grid.Row="2"
                                 Margin="16 0 16 8"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Style="{StaticResource MaterialDesignBody2TextBlock}"
+                                HorizontalAlignment="Center"
+                                FontFamily="Comic Sans MS"
                                 Text="E-mail" />
+                        <!--
                         <StackPanel
                                 Grid.Row="2"
                                 Orientation="Horizontal"
                                 Margin="16 0 16 8"
                                 HorizontalAlignment="Right">
-                            <Button
+                            <Button 
+                                    x:Name="btnEmailChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        -->
                         <Separator
                                 Grid.Row="3"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
-                        <TextBlock
+                        <TextBox
                                 Grid.Row="4"
                                 Margin="16 0 16 8"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Style="{StaticResource MaterialDesignBody2TextBlock}"
+                                FontFamily="Comic Sans MS"
+                                HorizontalAlignment="Center"
                                 Text="Contact No:" />
+                        <!--
                         <StackPanel
                                 Grid.Row="4"
                                 Orientation="Horizontal"
                                 Margin="16 0 16 8"
                                 HorizontalAlignment="Right">
                             <Button
+                                    x:Name="btnContactChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        -->
                         <Separator
                                 Grid.Row="5"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
-                        <TextBlock
+                        <TextBox
                                 Grid.Row="6"
                                 Margin="16 0 16 8"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Style="{StaticResource MaterialDesignBody2TextBlock}"
-                                Text="Password"/>
+                                HorizontalAlignment="Center"
+                                FontFamily="Comic Sans MS"
+                                Text="Password"
+                                />
+                        <!--
                         <StackPanel
                                 Grid.Row="6"
                                 Orientation="Horizontal"
                                 Margin="16 0 16 8"
                                 HorizontalAlignment="Right">
                             <Button
+                                    x:Name="btnPasswordChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        
+                        -->
+                        <Separator
+                                Grid.Row="7"
+                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                        <Button
+                                Grid.Row="8"
+                                Margin="16 0 16 8"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                FontFamily="Comic Sans MS"
+                                Content="Save"
+                                x:Name="btnSave"
+                                />
                     </Grid>
                 </materialDesign:Card>
             </ScrollViewer>
-
-
         </StackPanel>
-
-
-
     </Grid>
 </Page>
