@@ -43,6 +43,7 @@ namespace cms_app.Views
                 txtemail.Text = user.email;
                 txtcontacno.Text = user.contactNo;
                 password.Text = user.password;
+                name.Content = user.firstName +" "+ user.lastName;
 
 
 
@@ -66,6 +67,7 @@ namespace cms_app.Views
             private void btnSave_Click(object sender, RoutedEventArgs e)
         {
             add();
+            
         }
     }
 }

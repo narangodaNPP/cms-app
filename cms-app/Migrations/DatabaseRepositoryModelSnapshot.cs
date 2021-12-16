@@ -148,8 +148,9 @@ namespace cms_app.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<int>("contactNo")
-                        .HasColumnType("int");
+                    b.Property<string>("contactNo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("dateofbirth")
                         .HasColumnType("datetime2");

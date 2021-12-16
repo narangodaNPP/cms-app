@@ -31,12 +31,13 @@
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
+                <ColumnDefinition Width="13*"/>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition Width="3*"/>
             </Grid.ColumnDefinitions>
             <Border Background="White" 
                     CornerRadius="10" 
-                    Grid.ColumnSpan="2">
+                    Grid.ColumnSpan="3">
 
                 <Grid Grid.ColumnSpan="2" 
                       Background="Transparent">
@@ -74,16 +75,15 @@
             </Border>
             <TextBlock Text="Course Details"
                    VerticalAlignment="Center"
-                   HorizontalAlignment="Center"
+                   HorizontalAlignment="Left"
                    Grid.Row="1"
                    Grid.Column="1"
                    FontFamily="Comic Sans MS"
-                   FontSize="25"/>
+                   FontSize="25" Margin="137,0,0,0"/>
             <TextBlock Text="Card Details"
                    VerticalAlignment="Center"
                    HorizontalAlignment="Center"
                    Grid.Row="1"
-                   Grid.Column="0"
                    FontFamily="Comic Sans MS"
                    FontSize="25"/>
             <ScrollViewer VerticalScrollBarVisibility="Auto"
@@ -94,7 +94,7 @@
                     <StackPanel Grid.Column="0"
                         Margin="10,10,10,10" 
                         Grid.Row ="1">
-                        
+
                         <StackPanel Orientation="Horizontal">
                             <Label Content="Select Card"
                                 VerticalAlignment="Center"
@@ -112,7 +112,7 @@
                                 HorizontalAlignment="Right"
                             />
                         </StackPanel>
-                        
+
                         <TextBox 
                             Style="{StaticResource MaterialDesignFilledTextBox}"
                             AcceptsReturn="True"
@@ -152,11 +152,11 @@
 
                 </StackPanel>
             </ScrollViewer>
-            
+
             <!--Card details section-->
             <StackPanel Grid.Column="1"
                     Margin="10,10,10,10" 
-                    Grid.Row ="2"
+                    Grid.Row ="2" Grid.ColumnSpan="2"
                     >
                 <ComboBox
                     x:Name="txtsubject"
@@ -185,7 +185,7 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                 >
-                    
+
                 </ComboBox>
                 <ComboBox
                     x:Name="txtclass"
@@ -197,7 +197,7 @@
                     materialDesign:TextFieldAssist.HasClearButton="True"
                     Margin="10"
                 >
-                   
+
                 </ComboBox>
 
             </StackPanel>
@@ -209,8 +209,8 @@
                     FontSize="15"
                     Grid.Row="3"
                     Width="100"
-                    HorizontalAlignment="Right"
-                    Margin="20" Click="btnPay_Click">
+                    HorizontalAlignment="Left"
+                    Margin="322,37,0,38" Click="btnPay_Click" Grid.ColumnSpan="2">
             </Button>
 
             <!--
@@ -224,7 +224,7 @@
             -->
 
             <!-- Side bar-->
-                <!--
+            <!--
             <StackPanel Grid.Row="2"
                         Grid.Column="0" 
                         VerticalAlignment="Center"
@@ -258,7 +258,7 @@
             <Grid Grid.Column="1"
                   Margin="227,-257,-677,178"
                   Panel.ZIndex="-1" 
-                  Grid.RowSpan="3">
+                  Grid.RowSpan="3" Grid.ColumnSpan="2">
 
                 <Grid.RenderTransform>
                     <RotateTransform Angle="50"/>
