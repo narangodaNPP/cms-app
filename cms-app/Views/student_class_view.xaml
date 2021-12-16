@@ -32,15 +32,16 @@
         <StackPanel Grid.Row="1"
                     Orientation="Horizontal"
                     Grid.ColumnSpan="2"
-                    HorizontalAlignment="Left" Margin="280,0,0,0" Width="240" 
+                    HorizontalAlignment="Center"                  
+                    Width="240" 
                     >
             <ComboBox
                 x:Name="txtsubject"
                 Style="{StaticResource MaterialDesignFilledComboBox}"
-                IsEnabled="{Binding Path=IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
+                IsEnabled="{Binding IsChecked, ElementName=FilledComboBoxEnabledCheckBox}"
                 materialDesign:HintAssist.Hint="--Select Subject--"
                 FontFamily="Comic Sans MS"
-                FontSize="16"
+                FontSize="13"
                 Width="200"
                 >
                 <ComboBoxItem Content="Mathamatics"/>
@@ -126,7 +127,7 @@
                                 </Style>
                             </DataGridTextColumn.ElementStyle>
                         </materialDesign:DataGridTextColumn>
-                        
+
                         <DataGridTemplateColumn>
                             <DataGridTemplateColumn.CellTemplate>
                                 <DataTemplate>
