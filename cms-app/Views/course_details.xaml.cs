@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +22,27 @@ namespace cms_app.Views
     /// </summary>
     public partial class course_details : Page
     {
+
         public course_details()
         {
             InitializeComponent();
+            bindcombo();
+        }
+
+        public List<Allclasses> teacher { get; set; }
+        private void bindcombo() {
+
+            DatabaseRepository reposi = new DatabaseRepository();
+            var item = reposi.classes_set.ToList();
+            teacher = item;
+            DataContext = teacher;
+
+
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bindcombo();
         }
     }
 }

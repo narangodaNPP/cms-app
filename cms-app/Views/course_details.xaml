@@ -34,6 +34,7 @@
                     Grid.ColumnSpan="2"
                     >
             <ComboBox
+                x:Name="txtsubject"
                 Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
@@ -42,14 +43,17 @@
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Margin="10"
                 >
-                <ComboBoxItem
-                  Content="Item 1" />
-                <ComboBoxItem
-                  Content="Item 2" />
-                <ComboBoxItem
-                  Content="Item 3" />
+                <ComboBoxItem Content="Mathamatics"/>
+                <ComboBoxItem Content="Chemistry"/>
+                <ComboBoxItem Content="Bioscince"/>
+                <ComboBoxItem Content="IT"/>
+                
+                
             </ComboBox>
             <ComboBox
+                ItemsSource="{Binding }"
+                SelectedValuePath="Id"
+                DisplayMemberPath="teacher"
                 Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
@@ -58,14 +62,11 @@
                 materialDesign:TextFieldAssist.HasClearButton="True"
                 Margin="10"
                 >
-                <ComboBoxItem
-                  Content="Item 1" />
-                <ComboBoxItem
-                  Content="Item 2" />
-                <ComboBoxItem
-                  Content="Item 3" />
+               
             </ComboBox>
             <ComboBox
+                x:Name="txtteacher"
+               
                 Style="{StaticResource MaterialDesignFilledComboBox}"
                 FontFamily="Comic Sans MS"
                 FontSize="16"
@@ -93,7 +94,7 @@
                  HorizontalAlignment="Right"
                  Grid.Row ="3"
                  Grid.Column="0"
-                Grid.ColumnSpan="2"/>
+                Grid.ColumnSpan="2" Click="Button_Click"/>
 
 
         
