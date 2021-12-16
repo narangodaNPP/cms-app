@@ -1,4 +1,6 @@
-﻿using System;
+﻿using cms_app.Database;
+using cms_app.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,21 +24,19 @@ namespace cms_app.Views
         public Payment()
         {
             InitializeComponent();
+            bindcombo();
         }
 
-        private void personButton_Click(object sender, RoutedEventArgs e)
+        public List<Allclasses> teacher { get; set; }
+        private void bindcombo()
         {
-            myFrame.Content = new personal_details(); 
-        }
 
-        private void courseButton_Click(object sender, RoutedEventArgs e)
-        {
-            myFrame.Content = new course_details();
-        }
+            DatabaseRepository reposi = new DatabaseRepository();
+            var item = reposi.classes_set.ToList();
+            teacher = item;
+            DataContext = teacher;
 
-        private void cardButton_Click(object sender, RoutedEventArgs e)
-        {
-            myFrame.Content = new card_details();
+
         }
     }
 }
