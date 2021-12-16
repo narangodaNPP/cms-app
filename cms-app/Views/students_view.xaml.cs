@@ -1,4 +1,5 @@
-﻿using System;
+﻿using cms_app.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,17 @@ namespace cms_app.Views
         public students_view()
         {
             InitializeComponent();
+            load();
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        public void load()
         {
+
+            DatabaseRepository repository = new DatabaseRepository();
+
+            var classest = repository.classes_set.Where(a => a.teacherID == Global.userid).ToList();
+            classes.ItemsSource = classest;
+
 
         }
     }

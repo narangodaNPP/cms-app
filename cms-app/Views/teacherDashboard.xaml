@@ -126,7 +126,7 @@
                 />
                 -->
                 
-                <Button Content="STUDENTS"
+                <Button Content="MY CLASSES"
                         x:Name="studentButton"
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
