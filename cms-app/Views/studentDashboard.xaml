@@ -77,31 +77,28 @@
 
 
             <Label
-                   
-                        Grid.Row="1"
-                        Grid.Column="2"
-               ></Label>
-                <Label 
-                        x:Name="txtname"
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        FontFamily="Comic Sans MS"
-                        HorizontalAlignment="Left"
-                        VerticalAlignment="Center"
-                        FontSize="13"
-                        Margin="555,0,0,0" 
-                        
-                        Width="132" 
-                    />
+                   Grid.Row="1"
+                   Grid.Column="2">
+            </Label>
+            <Label 
+                    x:Name="txtname"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    FontFamily="Comic Sans MS"
+                    HorizontalAlignment="Right"
+                    Margin="0 0 40 0"
+                    VerticalAlignment="Center"
+                    FontSize="15"
+                    Width="132" 
+            />
 
             <Frame Grid.Row="2"
                    Grid.RowSpan="3"
                    Grid.Column="1"
                    x:Name="myStudentDashboardFrame" 
-                    
+                   Source="student_home.xaml"
                    NavigationUIVisibility="Hidden"
             />
-
 
             <!-- Side bar-->
             <StackPanel Grid.Row="2" 
@@ -126,7 +123,6 @@
                 />
                 <Button Content="PAYMENTS"
                         x:Name="payButton"
-                        
                         Margin="0 20 0 0"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
                         FontFamily="Comic Sans MS"
@@ -136,15 +132,14 @@
             </StackPanel>
 
             <Button Content="LOGOUT"
-                        x:Name="logoutButton"
-                        Margin="2"
-                        Grid.Row="4"
-                        VerticalAlignment="Center"
-                        
-                        Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        FontFamily="Comic Sans MS"
-                        FontSize="20" Click="logoutButton_Click" 
-                />
+                    x:Name="logoutButton"
+                    Margin="2"
+                    Grid.Row="4"
+                    VerticalAlignment="Center"
+                    Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    FontFamily="Comic Sans MS"
+                    FontSize="20" Click="logoutButton_Click" 
+            />
 
 
             <!-- Styling part-->
@@ -209,8 +204,5 @@
         </Grid>
 
     </Border>
-
-
-
 
 </Window>

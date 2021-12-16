@@ -51,8 +51,6 @@ namespace cms_app.Views
             myStudentDashboardFrame.Content = new student_class_view();
         }
 
-       
-
         private void logoutButton_Click(object sender, RoutedEventArgs e)
         {
             landingWindow landing = new landingWindow();
@@ -64,7 +62,7 @@ namespace cms_app.Views
         {
             Payment payment = new Payment();
             payment.Show();
-            this.Hide();
+            this.Close();
         }
     }
 }
