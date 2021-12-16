@@ -10,6 +10,7 @@ namespace cms_app.Database
         public DbSet<Payment> Payments { get; set; }
         public DbSet<teacher> teachers { get; set; }
         public DbSet<Allclasses> classes_set { get; set; }
+        public DbSet<studentclass> studentclasses { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

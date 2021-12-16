@@ -13,7 +13,7 @@ namespace cms_app.Models
         [Key]
         public int clID { get; set; }
         public int studentID { get; set; }
-            public int classID { get; set; }
+        public int classID { get; set; }
 
 
 

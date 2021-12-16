@@ -2,6 +2,7 @@
 using cms_app.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,19 +25,67 @@ namespace cms_app.Views
         public Payment()
         {
             InitializeComponent();
-            bindcombo();
+
         }
 
-        public List<Allclasses> teacher { get; set; }
-        private void bindcombo()
+
+
+        private void txtsubject_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
             DatabaseRepository reposi = new DatabaseRepository();
-            var item = reposi.classes_set.ToList();
-            teacher = item;
-            DataContext = teacher;
 
+            List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text).ToList();
 
+            Trace.WriteLine("hbshkvb " + teachers.Count());
+            List<string> ateacher = new List<string>();
+
+            foreach (Allclasses teacher in teachers) {
+
+                ateacher.Add(teacher.teacher);
+                //txtteacher.Items.Add(teacher.teacher);
+                Trace.WriteLine(teacher.teacher);
+            }
+            txtteacher.ItemsSource = ateacher;
         }
-    }
-}
+
+        private void txtteacher_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            //Trace.WriteLine(txtteacher.Text + "fgsdfhs");
+            DatabaseRepository reposi = new DatabaseRepository();
+
+            List<Allclasses> teachers = reposi.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text).ToList();
+
+            Trace.WriteLine("hbshkvb" + teachers.Count());
+            List<string> ateacher = new List<string>();
+
+            foreach (Allclasses teacher in teachers)
+            {
+
+                ateacher.Add(teacher.teacher);
+                //txtteacher.Items.Add(teacher.teacher);
+                Trace.WriteLine(teacher.teacher);
+            }
+            txtclass.ItemsSource = ateacher;
+        }
+
+
+        public void add()
+        {
+            DatabaseRepository repository = new DatabaseRepository();
+
+            var teachers = repository.classes_set.Where(a => a.subject == txtsubject.Text && a.teacher == txtteacher.Text && a.classname == txtclass.Text).FirstOrDefault();
+
+            var id = teachers.classID;
+
+            studentclass studentclasses = new studentclass()
+            {
+                classID = id,
+                studentID = Global.userid
+
+
+            };
+
+
+            
+        }
+    } }
