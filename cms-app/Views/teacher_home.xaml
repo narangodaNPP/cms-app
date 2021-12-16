@@ -92,22 +92,22 @@
                         </Grid.RowDefinitions>
                         <Label
                                 Grid.Row="0"
-                                Margin="16 16 16 4"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 FontFamily="Comic Sans MS"
                                 VerticalContentAlignment="Center"
                                 Content="User Name" 
-                                HorizontalAlignment="Center"/>
+                                HorizontalAlignment="Left"/>
 
                         <Separator
                                 Grid.Row="1"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
                         <TextBox
                                 Grid.Row="2"
-                                Margin="16 0 16 8"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
+                                HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
                                 Text="E-mail" />
                         
@@ -116,11 +116,11 @@
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
                         <TextBox
                                 Grid.Row="4"
-                                Margin="16 0 16 8"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 VerticalAlignment="Center"
                                 FontFamily="Comic Sans MS"
-                                HorizontalAlignment="Center"
+                                HorizontalAlignment="Left"
                                 Text="Contact No:" />
                         
                         <Separator
@@ -128,10 +128,10 @@
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
                         <TextBox
                                 Grid.Row="6"
-                                Margin="16 0 16 8"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Center"
+                                HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
                                 Text="Password"
                                 />
