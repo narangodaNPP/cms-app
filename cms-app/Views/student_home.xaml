@@ -118,6 +118,7 @@
                                 HorizontalAlignment="Right">
                             <Button 
                                     x:Name="btnEmailChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
@@ -139,6 +140,7 @@
                                 HorizontalAlignment="Right">
                             <Button
                                     x:Name="btnContactChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
@@ -161,6 +163,7 @@
                                 HorizontalAlignment="Right">
                             <Button
                                     x:Name="btnPasswordChange"
+                                    FontFamily="Comic Sans MS"
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
