@@ -101,12 +101,13 @@
                         </Grid.RowDefinitions>
                         <Label
                                 Grid.Row="0"
-                                Margin="134,16,0,4"
                                 FontSize="20"
+                                Margin="5 0 0 0"
                                 FontFamily="Comic Sans MS"
                                 VerticalContentAlignment="Center"
                                 Content="User Name" 
-                                HorizontalAlignment="Left" Grid.ColumnSpan="2"/>
+                                HorizontalAlignment="Left" 
+                                Grid.ColumnSpan="2"/>
 
                         <Separator
                                 Grid.Row="1"
@@ -114,12 +115,13 @@
                         <TextBox
                                 x:Name="txtemail"
                                 Grid.Row="2"
-                                Margin="160,0,0,0"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 VerticalAlignment="Top"
                                 HorizontalAlignment="Left"
                                 FontFamily="Comic Sans MS"
-                                Text="E-mail" Grid.ColumnSpan="2" />
+                                Text="E-mail" 
+                                Grid.ColumnSpan="2" />
                         <!--
                         <StackPanel
                                 Grid.Row="2"
@@ -139,12 +141,13 @@
                         <TextBox
                                x:Name="txtcontacno"
                                 Grid.Row="4"
-                                Margin="134,0,0,0"
+                                Margin="5 0 0 0"
                                 FontSize="20"
                                 VerticalAlignment="Top"
                                 FontFamily="Comic Sans MS"
                                 HorizontalAlignment="Left"
-                                Text="Contact No:" Grid.ColumnSpan="2" />
+                                Text="Contact No:" 
+                                Grid.ColumnSpan="2" />
                         <!--
                         <StackPanel
                                 Grid.Row="4"
@@ -163,14 +166,15 @@
                                 Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <TextBox
                              x:Name="password"
-                                Grid.Row="6"
-                                Margin="146,0,0,0"
-                                FontSize="20"
-                                VerticalAlignment="Top"
-                                HorizontalAlignment="Left"
-                                FontFamily="Comic Sans MS"
-                                Text="Password" Grid.ColumnSpan="2"
-                                />
+                             Grid.Row="6"
+                             Margin="5 0 0 0"
+                             FontSize="20"
+                             VerticalAlignment="Top"
+                             HorizontalAlignment="left"
+                             FontFamily="Comic Sans MS"
+                             Text="Password" 
+                             Grid.ColumnSpan="2"
+                        />
                         <!--
                         <StackPanel
                                 Grid.Row="6"
@@ -190,14 +194,16 @@
                                 Style="{StaticResource MaterialDesignLightSeparator}" Grid.ColumnSpan="2" Margin="0,2,0,2" />
                         <Button
                                 Grid.Row="7"
-                                Margin="152,20,0,0"
                                 FontSize="20"
                                 VerticalAlignment="Top"
-                                HorizontalAlignment="Left"
+                                HorizontalAlignment="Center"
                                 FontFamily="Comic Sans MS"
                                 Content="Save"
-                                x:Name="btnSave" Click="btnSave_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"
-                                />
+                                x:Name="btnSave" 
+                                Click="btnSave_Click" 
+                                Grid.ColumnSpan="2" 
+                                Grid.RowSpan="2"
+                        />
                     </Grid>
                 </materialDesign:Card>
             </ScrollViewer>
