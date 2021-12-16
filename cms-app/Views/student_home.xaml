@@ -90,14 +90,18 @@
                                     Height="Auto" />
                             <RowDefinition
                                     Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
+                            <RowDefinition
+                                    Height="Auto" />
                         </Grid.RowDefinitions>
-                        <TextBlock
+                        <Label
                                 Grid.Row="0"
                                 Margin="16 16 16 4"
                                 FontSize="20"
                                 FontFamily="Comic Sans MS"
-                                Style="{StaticResource MaterialDesignHeadline5TextBlock}"
-                                Text="User Name" 
+                                VerticalContentAlignment="Center"
+                                Content="User Name" 
                                 HorizontalAlignment="Center"/>
 
                         <Separator
@@ -108,9 +112,10 @@
                                 Margin="16 0 16 8"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
+                                HorizontalAlignment="Center"
                                 FontFamily="Comic Sans MS"
                                 Text="E-mail" />
+                        <!--
                         <StackPanel
                                 Grid.Row="2"
                                 Orientation="Horizontal"
@@ -122,6 +127,7 @@
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        -->
                         <Separator
                                 Grid.Row="3"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
@@ -131,8 +137,9 @@
                                 FontSize="20"
                                 VerticalAlignment="Center"
                                 FontFamily="Comic Sans MS"
-                                HorizontalAlignment="Left"
+                                HorizontalAlignment="Center"
                                 Text="Contact No:" />
+                        <!--
                         <StackPanel
                                 Grid.Row="4"
                                 Orientation="Horizontal"
@@ -144,6 +151,7 @@
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        -->
                         <Separator
                                 Grid.Row="5"
                                 Style="{StaticResource MaterialDesignLightSeparator}" />
@@ -152,10 +160,11 @@
                                 Margin="16 0 16 8"
                                 FontSize="20"
                                 VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
+                                HorizontalAlignment="Center"
                                 FontFamily="Comic Sans MS"
                                 Text="Password"
                                 />
+                        <!--
                         <StackPanel
                                 Grid.Row="6"
                                 Orientation="Horizontal"
@@ -167,6 +176,20 @@
                                     Content="Change" 
                                     Width="94"/>
                         </StackPanel>
+                        
+                        -->
+                        <Separator
+                                Grid.Row="7"
+                                Style="{StaticResource MaterialDesignLightSeparator}" />
+                        <Button
+                                Grid.Row="8"
+                                Margin="16 0 16 8"
+                                FontSize="20"
+                                VerticalAlignment="Center"
+                                HorizontalAlignment="Center"
+                                FontFamily="Comic Sans MS"
+                                Content="Save"
+                                />
                     </Grid>
                 </materialDesign:Card>
             </ScrollViewer>
